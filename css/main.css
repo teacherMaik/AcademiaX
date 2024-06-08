@@ -1,30 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Variables */
+:root {
+  --title-font: "Rubik", sans-serif;
+  --text-font: "Libre  Franklin", sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 body {
-  font-size: 10px;
   background-color: white;
   color: black;
 }
 
-h1 { font-size: 4.2rem; }
+h1 { 
+  font-family: var(--title-font);
+  font-size: 4.2rem; 
+}
 
-h2 { font-size: 2.8rem; }
+h2 { 
+  font-family: var(--title-font);
+  font-size: 2.8rem;
+}
 
-h3, h4, p { font-size: 2.1rem; }
+h3, h4, p { 
+  font-family: var(--text-font);
+  font-size: 2.1rem;
+}
 
-a { text-decoration: none; }
+a { 
+  font-family: var(--text-font);
+  text-decoration: none;
+  color: white
+}
+
+a:hover {
+  color: gold;
+}
+
+ul { list-style: none; }
 
 /*  Utilities */
 .inline-gold { color: gold;}
 
-header .navbar {
+
+/* Styling */
+header {
+  position: fixed;
   width: 100%;
   height: 90px;
-  padding: 7px;
+  z-index: 2;
+}
+
+header .navbar {
+  width: 100%;
+  height: 100%;
+  padding: 7px 21px;
   background-color: black;
   color: white;
   display: flex;
@@ -32,6 +68,185 @@ header .navbar {
   align-items: center;
 }
 
-header .navbar-logo h4 {
-  font-size: 1rem;
+header .navbar-logo h3, header .navbar-logo h3 span { 
+  font-family: var(--title-font);
+  font-size: 2.8rem;
 }
+
+header .navbar-logo h4 { 
+  font-family: var(--text-font);
+  font-size: 1.35rem;
+}
+
+header ul#nav-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 21px;
+}
+
+header ul#nav-menu li {
+  margin: 3px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+header ul#nav-menu li a {
+  padding: 7px;
+  font-size: 1.8rem;
+  border-bottom: 3px solid transparent;
+}
+
+header ul#nav-menu li a.current,
+header ul#nav-menu li a:hover {
+  border-bottom: 3px solid gold;
+}
+
+section#hero-full-col {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 42px;
+}
+
+section#hero-full-col h1 { margin-bottom: 21px; }
+section#hero-full-col h2 { 
+  font-family: var(--text-font);
+  margin-bottom: 14px;
+  width: 63vw;
+}
+
+section#hero-full-row {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 42px;
+}
+
+section .hero-full-info {
+  width: 84vw;
+}
+
+section#hero-full-row h1,
+section#hero-half-col h1 { margin-bottom: 21px; }
+
+section#hero-full-row h2,
+section#hero-half-col h2 {
+  font-family: var(--text-font);
+  margin-bottom: 14px;
+  width: 70vw;
+}
+
+section .hero-full-gallery {
+  width: 16vw;
+}
+
+section .hero-full-gallery img {
+  width: 84%;
+  height: auto;
+}
+
+section#hero-half-col {
+  height: 42vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 42px;
+}
+
+
+
+section#html-css {
+  width: 100vw;
+  height: calc(100vh - 90px);
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.html-css-menu-container {
+  width: 63vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.html-css-menu-container a.btn {
+  width: 14vw;
+  cursor: pointer;
+  padding: 7px;
+  font-size: 1.8rem;
+  font-family: var(--text-font);
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+}
+
+.html-css-menu-container a.btn:hover {
+  background-color: darkgray;
+  color: black;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  padding: 21px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer #footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+footer #footer-social {
+  margin-bottom: 21px;
+}
+
+footer #footer-social a {
+  border-radius: 7px;
+  color: white;
+  padding: 7px;
+  margin: 0 7px;
+  cursor: pointer;
+}
+
+footer #footer-social a:hover {
+  background-color: gold;
+  color: black;
+}
+
+footer #footer-info p {
+  font-size: 1.2rem;
+}
+
+footer #my-webs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+
+footer #my-webs a {
+  font-size: 1.8rem;
+  color: white;
+}
+
+footer #my-webs a:hover {
+  color: gold;
+}
+
