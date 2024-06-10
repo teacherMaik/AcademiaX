@@ -197,6 +197,23 @@ section#html-css {
   color: black;
 }
 
+section#html-text {
+  position: relative;
+  width: 100%;
+  background-color: gold;
+  display: grid;
+  grid-template-columns: 1fr 1r;
+  gap: 42px;
+  padding: 42px;
+}
+
+.text-container {
+  padding: 21px;
+  border-radius: 7px;
+  background-color: white;
+  color: black;
+}
+
 footer {
   position: relative;
   width: 100%;
