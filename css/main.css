@@ -48,6 +48,21 @@ ul { list-style: none; }
 /*  Utilities */
 .inline-gold { color: gold;}
 
+.btn-black {
+  background-color: black;
+  color: white;
+  font-size: 1.8rem;
+  padding: 14px 42px;
+  border-radius: 7px;
+  border: 3px solid transparent;
+}
+
+.btn-black:hover {
+  background-color: gold;
+  color: black;
+  border: 3px solid black;
+  font-weight: 700;
+}
 
 /* Styling */
 header {
@@ -94,6 +109,7 @@ header ul#nav-menu li {
 }
 
 header ul#nav-menu li a {
+  position: relative;
   padding: 7px;
   font-size: 1.8rem;
   border-bottom: 3px solid transparent;
@@ -102,6 +118,42 @@ header ul#nav-menu li a {
 header ul#nav-menu li a.current,
 header ul#nav-menu li a:hover {
   border-bottom: 3px solid gold;
+}
+
+header ul#nav-menu li a i {
+  color: gold;
+}
+
+header ul#nav-menu li#challenges-btn-container.open {
+  height: 90px;
+  background-color: red;
+}
+
+header ul#nav-menu li#challenges-btn-container.open a {
+  color: black;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+
+header ul#nav-menu li#challenges-btn-container.open a i{
+  color: white;
+}
+
+header nav.nav-drop-down {
+  display: none;
+  position: absolute;
+  top: 90px;
+  right: 45px;
+  background-color: red;
+  width: 28%;
+  height: auto;
+  padding: 14px;
+  text-align: left;
+  z-index: 3;
+}
+
+header nav.nav-drop-down ul li a:hover {
+  border-bottom: 3px 
 }
 
 section#hero-full-col {
@@ -133,6 +185,14 @@ section#hero-full-row {
 
 section .hero-full-info {
   width: 84vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section .hero-full-info a {
+  width: 420px;
+  text-align: center;
 }
 
 section#hero-full-row h1,
@@ -141,7 +201,7 @@ section#hero-half-col h1 { margin-bottom: 21px; }
 section#hero-full-row h2,
 section#hero-half-col h2 {
   font-family: var(--text-font);
-  margin-bottom: 14px;
+  margin-bottom: 21px;
   width: 70vw;
 }
 
@@ -162,8 +222,6 @@ section#hero-half-col {
   padding: 0 42px;
 }
 
-
-
 section#html-css {
   width: 100vw;
   height: calc(100vh - 90px);
@@ -171,6 +229,7 @@ section#html-css {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 42px;
 }
 
 .html-css-menu-container {
@@ -200,9 +259,10 @@ section#html-css {
 section#html-text {
   position: relative;
   width: 100%;
+  min-height: calc(100vh - 42vh);
   background-color: gold;
   display: grid;
-  grid-template-columns: 1fr 1r;
+  grid-template-columns: repeat(2, 1fr);
   gap: 42px;
   padding: 42px;
 }
@@ -212,6 +272,41 @@ section#html-text {
   border-radius: 7px;
   background-color: white;
   color: black;
+}
+
+.text-container h3 {
+  margin-bottom: 21px;
+}
+
+.text-container-book {
+  padding: 21px;
+  background-color: lightgrey;
+  border-radius: 7px;
+  margin-bottom: 14px;
+}
+
+.text-container-book h4 {
+  margin-bottom: 14px;
+}
+
+.text-container-book ul li q {
+  font-size: 1.9rem;
+  font-style: italic;
+}
+
+.code-container {
+  max-width: 100%;
+  padding: 21px;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+  overflow-x: auto;
+}
+
+.code-container pre {
+  width: 100%;
+  overflow-x: scroll;
+  border: 3px solid white;
 }
 
 footer {
@@ -266,4 +361,5 @@ footer #my-webs a {
 footer #my-webs a:hover {
   color: gold;
 }
+
 

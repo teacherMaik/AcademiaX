@@ -6,7 +6,7 @@
   <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
   <link rel="stylesheet" href="../css/main.css">
   <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
-  <title>Retos y ejercicios de html y css | Teacher Maik en Academia X</title>
+  <title>Aprendizajes de texto con HTML | Teacher Maik en Academia X</title>
 </head>
 <body>
   
@@ -34,23 +34,46 @@
   </header>
 
   <main>
-    <section id="hero-full-row">
+    <section id="hero-half-col">
       <div class="hero-full-info">
-        <h1>HTML & CSS</h1>
-        <h2>Al comenzar este Bootcamp, ya tenía bastantes conocimientos de estas dos herramientas de desarrollo web. Acá compartiré cosas nuevas que he aprendido de los cursos en Academia-X que no aprendí en otros lados.</h2>
-        <a href="#html-css" class="btn-black">Ver Portfolio</a>
+        <h1>Aprendizajes con texto</h1>
+        <h2>Puedo destacar el uso de citas, etiquetas de sup y sub al igual que reflejar líneas de código.</h2>
       </div>
-      <div class="hero-full-gallery">
-        <img src="../img/html-5-svgrepo-com.svg" alt="html logo">
-        <img src="../img/css-3-svgrepo-com.svg" alt="css logo">
-      </div>
+      
     </section>
 
-    <section id="html-css">
-      <div class="html-css-menu-container">
-        <a href="html-text.html" class="btn">html texto</a>
-        <a href="" class="btn">html imágenes</a>
-        <a href="" class="btn">html multimedia</a>
+    <section id="html-text">
+      <div class="text-container">
+        <h3>Citas de libros</h3>
+        <div class="text-container-book">
+          <h4 cite="https://www.casadellibro.com/libro-siddhartha?query=siddhartha">Siddhartha<sub>1</sub></h4>
+          <ul>
+            <li><p><q>It is not for me to judge another man's life. I must judge, I must choose, I must spurn, purely for myself. For myself, alone.</q></p></li>
+          </ul>
+        </div>
+        <h4><sup>1</sup><cite>Hesse, H. (2000). Siddhartha. Dover Publications</cite></h4>
+      </div>
+      
+      <div class="code-container">
+        <pre>
+          <code>
+            &lt;div class="text-container"&gt;
+              &lt;h3&gt;Citas de libros&lt;/h3&gt;
+              &lt;div class="text-container-book"&gt;
+                &lt;h4 cite="https://www.casadellibro.com/libro-siddhartha?query=siddhartha"&gt;
+                  Siddhartha&lt;sub&gt;1&lt;/sub&gt;
+                &lt;/h4&gt;
+              &lt;ul&gt;
+                &lt;li&gt;
+                  &lt;p&gt;
+                    &lt;q&gt;It is not for me to judge another man's life. I must judge, I must choose, I must spurn, purely for myself. For myself, alone.&lt;/q&gt;
+                  &lt;/p&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;h4&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;cite&gt;Hesse, H. (2000). Siddhartha. Dover Publications&lt;/cite&gt;&lt;/h4&gt;
+          </code>
+        </pre>
       </div>
     </section>
   </main>
@@ -76,6 +99,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>
