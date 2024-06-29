@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <div id="nav" style="display: flex; justify-content: space-between;">
+    <a href="index.html">Got to Index</a>
+    <a href="jsxComponents.html">Go to jsxComponents</a>
+    <a href="clases.html">Go To Classes</a>
+    <a href="eventsEstados.html">Go To Events % States</a>
+  </div>
+  <script type="text/babel">
+    /* function ClickCounter(props) {
+
+      const [clicks, setClicks] = React.useState(0);
+
+      return (
+        <div>
+          <h1>You can increase or decrease the number of clicks</h1>
+          <h2>Total number of clicks: {clicks}</h2>
+          <div style={{display: "flex"}}>
+            <button onClick={() => setClicks(clicks+1)}>+1</button>
+            <button onClick={() => setClicks(clicks-1)}>-1</button>
+          </div>
+        </div>
+      )
+    } */
+
+    // Same as before but with Classes
+
+    class ClickCounter extends React.Component {
+
+      constructor(props) {
+        super(props);
+        this.state = {clicks: 0};
+      }
+
+      render() {
+
+        return (
+
+        <div>
+          <h1>You can increase or decrease the number of clicks</h1>
+          <h2>Total number of clicks: {this.state.clicks}</h2>
+          <div style={{display: "flex"}}>
+            <button onClick={() => this.setState((state, props) => ({clicks: state.clicks + 1}))}>+1</button>
+            <button onClick={() => this.setState((state, props) => ({clicks: state.clicks - 1}))}>-1</button>
+          </div>
+        </div>
+        );
+      }
+    }
+    ReactDOM.render(<ClickCounter />, document.getElementById('root'));
+  </script>
+</body>
+</html>

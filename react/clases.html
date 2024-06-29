@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <div id="nav" style="display: flex; justify-content: space-between;">
+    <a href="index.html">Got to Index</a>
+    <a href="jsxComponents.html">Go to jsxComponents</a>
+    <a href="clases.html">Go To Classes</a>
+    <a href="eventsEstados.html">Go To Events % States</a>
+  </div>
+  <script type="text/babel">
+    /* function YouWin(props) {
+      return <h3>You have {props.points} points</h3>;
+    } */
+
+    class YouWin extends React.Component {
+
+      render() {
+        return <h3>You have {this.props.points} points</h3>;
+      }
+    }
+
+    ReactDOM.render(<YouWin points="42"/>, document.getElementById('root'));
+  </script>
+</body>
+</html>
