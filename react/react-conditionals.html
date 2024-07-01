@@ -3,9 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>React Conditionlas</title>
 </head>
 <body>
-  
+  <div id="root"></div>
+  <script type="text/babel">
+
+    function Conditionals(props) {
+      return props.auth ? <h1>Bienvenidos</h1> : <h1>Registrese antes</h1>;
+    }
+
+    function App(props) {
+      const [auth, setAuth] = React.useState(false);
+
+      return (
+        <>
+          <button onClick={() => setAuth(true)}>Autorizar</button>
+          <Conditionals auth={auth}/>
+        </>
+      )
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
 </body>
 </html>
