@@ -35,7 +35,8 @@
     const h1 = <h1 className={user.surName}>Hello World and Hello {userFullName(user)}</h1>;
     ReactDOM.render(h1, document.getElementById('header'));
 
-    function tickTockClock() {
+    // Not going to render the clock for MEMORY ISSUES: Go look at /react-life-cycles.html
+    /* function tickTockClock() {
       const clockElement = (
 
         <div>
@@ -46,7 +47,7 @@
       ReactDOM.render(clockElement, document.getElementById('root'));
     }
 
-    setInterval(tickTockClock, 1000);
+    setInterval(tickTockClock, 1000); */
 
     function IntroText(text) {
       return <h2>{text}</h2>;

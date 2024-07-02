@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>React Life Cycles</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+
+    function NumInput(props) {
+
+      return (
+        <div style={{display: 'flex', flexDirection: 'column', padding: '21px', width: '210px'}}>
+          <label style={{marginBottom: '14px'}} htmlFor="inputNum">{props.title}</label>
+          <input style={{borderColor: 'red'}} type="number" value={props.value} onChange={props.onChange} />
+        </div>
+      )
+    }
+
+    function CalcPercent(props) {
+
+      const [operation, setOperation] = React.useState('5%');
+      const [val, setVal] = React.useState(0);
+
+      const onFive = (e) => {
+
+        setOperation('5%');
+        setVal(e.target.value);
+      }
+
+      const onFifteen = (e) => {
+        setOperation('15%');
+        setVal(e.target.value);
+      }
+
+      const five = operation === '5%' ? val : (val / 3);
+      const fifteen = operation === '15%' ? val : (val * 3);
+
+      return (
+        <div>
+          <NumInput title="5%" value={five} onChange={onFive}/>
+          <NumInput title="15%" value={fifteen} onChange={onFifteen}/>
+        </div>
+      )
+    }
+
+    ReactDOM.render(<CalcPercent />, document.getElementById('root'));
+
+  </script>
+</body>
+</html>

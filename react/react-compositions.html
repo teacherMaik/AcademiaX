@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>React Life Cycles</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+
+    function Card(props) {
+
+      return (
+        <div>
+          <h1>{props.title}</h1>
+          <h2>{props.text}</h2>
+          { props.children }
+        </div>
+      )
+    }
+
+    function PlaceCard(props) {
+
+      const [name, setName] = React.useState('');
+
+      const onChange = (e) => {
+
+        setName(e.target.value);
+      }
+
+      const onClick = (e) => {
+
+        alert(`Bienvenidos ${name}`)
+      }
+      return (
+
+        <Card title='Hola Mundo' text='Hola Madrid'>
+          <input type="text" onChange={onChange}/>
+          <input type="Submit" value="Quiero estudiar" onClick={onClick}/>
+        </Card>
+      )
+
+    }
+
+    ReactDOM.render(<PlaceCard />, document.getElementById('root'));
+  </script>
+</body>
+</html>

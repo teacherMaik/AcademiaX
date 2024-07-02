@@ -12,36 +12,38 @@
   <div id="root"></div>
   <script type="text/babel">
 
-    class TickTockClock extends React.Component {
+    class Form extends React.Component {
+
       constructor(props) {
         super(props);
-        this.state = { date: new Date().toLocaleTimeString() };
-      };
-
-      componentDidMount() {
-        this.timerID = setInterval(() => this.tick(), 1000);
+        this.state = { name: ''};
       }
 
-      componentWillUnmount() {
-        clearInterval(this.timerID);
+      onChange = e => {
+        console.log(e);
+        console.log(name.value);
+        this.setState({ name: e.target.value })
       }
 
-      tick() {
-        this.setState(() => ({ date: new Date().toLocaleTimeString() }));
+      onSubmit = e => {
+        alert(`El Formulario va aenviar: ${this.state.name}`)
+        e.preventDefault();
       }
+
 
       render() {
 
         return (
-          <>
-            <h1>¿Qué hora son?</h1>
-            <h2>Son las { this.state.date }</h2>
-          </>
-        );
+          <form onSubmit={onSubmit}>
+            <label htmlFor="name">Nombre</label>
+            <input type="text" name="name" value={this.state.name} onChange={this.onChange}/>
+            <input type="submit" value="Enviar"/>
+          </form>
+        )
       }
     }
 
-    ReactDOM.render(<TickTockClock />, document.getElementById('root'));
+    ReactDOM.render(<Form />, document.getElementById('root'));
 
   </script>
 </body>

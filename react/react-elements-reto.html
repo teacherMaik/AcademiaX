@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/react.css">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>React Life Cycles</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+
+    function ProductCounter(props) {
+
+      const [ticks, setTicks] = React.useState(0);
+      
+      function upTicks() {
+        setTicks(ticks + 1);
+      }
+
+      function downTicks() {
+        setTicks(ticks - 1);
+      }
+
+      return (
+
+        <div className={ 'product-counter' }>
+          <button onClick={downTicks}>-</button>
+          <p>{ ticks }</p>
+          <button onClick={upTicks}>+</button>
+        </div>
+      )
+    }
+
+    function Card(props) {
+
+      return (
+
+        <div className={ 'card' }>
+          <img src={props.img} alt="" />
+          <div className={ 'card-description' }>
+            <h2>{props.title}</h2>
+            <p>{props.text}</p>
+            <ProductCounter />
+          </div>
+        </div>
+      )
+    }
+
+    function ProductGrid(props) {
+
+      return (
+        <section className={ 'section-container' }>
+          <Card 
+            img={ 'assets/nintendo-minecraft-unplash.r_d.3976-2652.webp' } 
+            title={ 'Nintendo Switch' } 
+            text={ 'Consola más reciente de Nintendo que cambió el mercado' }
+            />
+          <Card 
+            img={ 'assets/images.jpg' } 
+            title={ 'Playstation Distancia' } 
+            text={ 'Consola de Playstation para competir con el Nintendo Switch' }
+          />
+          <Card
+            img={ 'assets/images-xbox.jpg' }
+            title={ 'X-box' } 
+            text={ 'No tiene consola de manos como Nintendo o Playstation' }
+          />
+        </section>
+      )
+    }
+
+    ReactDOM.render(<ProductGrid />, document.getElementById('root'));
+  </script>
+
+  <!--<img src="assets/nintendo-minecraft-unplash.r_d.3976-2652.webp" alt="">-->
+</body>
+</html>
