@@ -12,39 +12,22 @@
   <div id="root"></div>
   <script type="text/babel">
 
-    class Form extends React.Component {
+    function ListUsers(props) {
 
-      constructor(props) {
-        super(props);
-        this.state = { name: ''};
-      }
-
-      onChange = e => {
-        console.log(e);
-        console.log(name.value);
-        this.setState({ name: e.target.value })
-      }
-
-      onSubmit = e => {
-        alert(`El Formulario va aenviar: ${this.state.name}`)
-        e.preventDefault();
-      }
+      const users = [users, setUsers] = React.useState('');
 
 
-      render() {
-
-        return (
-          <form onSubmit={onSubmit}>
-            <label htmlFor="name">Nombre</label>
-            <input type="text" name="name" value={this.state.name} onChange={this.onChange}/>
-            <input type="submit" value="Enviar"/>
-          </form>
-        )
-      }
+      return (
+        <main>
+          <h1 style={{ fontSize: '21px', color: 'blue', width: '100vw', textAlign: 'center'}}>Lista de Usuarios</h1>
+          <section style={{disply: 'grid', gridTemplateColumns: 'repeat(3, 1fr)'}}>
+            {users.map(user => )}
+          </section>
+        </main>
+      )
     }
 
-    ReactDOM.render(<Form />, document.getElementById('root'));
-
+    ReactDOM.render(<ListUsers />, document.getElementById('root'));
   </script>
 </body>
 </html>
