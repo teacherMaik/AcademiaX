@@ -6,17 +6,27 @@
   <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
   <link rel="stylesheet" href="/css/main.css">
   <style>
-    main.hero-mod section.first-row, .second-row {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+    table {
+      width: 42%;
       margin-bottom: 21px;
     }
 
+    table th { 
+      font-size: 21px;
+      padding: 7px;
+    }
+    table td { font-size: 14px;}
+
+    table#employees tr td:nth-child(4),
+    table#employees tr th:nth-child(4),
+    table#products tr th:nth-child(3),
+    table#products tr td:nth-child(3) {
+      background-color: gold;
+    }
   </style>
   <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
   
-  <title>Retos y ejercicios de HTML multimedia texto | Teacher Maik en Academia X</title>
+  <title>Retos y ejercicios de HTML Tables | Teacher Maik en Academia X</title>
 </head>
 <body>
   
@@ -36,31 +46,68 @@
   </header>
 
   <main class="hero-mod">
-    <h1 style="margin-bottom: 21px; width: 100%; text-align: center;">Multimedia en HTML</h1>
-    <section class="first-row">
-      <div class="audio">
-        <h2 style="margin-bottom: 14px;">Pistas de audio</h2>
-        <audio 
-          style="margin-bottom: 42px;" 
-          src="html-mod-assets/Record (online-voice-recorder.com).mp3" 
-          controls>
-        </audio>
-      </div>
-      <div class="video">
-        <h2 style="margin-bottom: 14px;">Un vídeo desde el propio proyecto</h2>
-        <video style="width: 560px; height: 315px" src="html-mod-assets/Escape the Cloud Trailor.mp4" controls></video>
-      </div>
-    </section>
-    <section class="second-row">
-      <div class="iframe">
-        <h2 style="margin-bottom: 14px;">El mismo vídeo pero desde un iframe</h2>
-        <iframe style="margin-bottom: 14px; border-radius: 7px;"width="560" height="315" src="https://www.youtube.com/embed/ZwyAUVebZM0?si=yajRd5DbPPcdCU_F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div style="margin: 21px 0 21px 21px;" class="take-aways">
-        <p style="font-size: 16px; margin-bottom: 14px;">La verdad que no aprendí demasiado nuevo con este módulo. Al trabajar con HTML uno se va dando cuenta de que es bastante rutinario, al menos en su estado puro, de manera que se escribe muy parecido a los demás elementos de html solo que con diferentes atributos</p>
-        <p style="font-size: 16px; margin-bottom: 14px;">Me gustaría conocer ventajas a nivel de rendering si es mejor tener un vídeo alojado en un servicio de teceros, como youtube, o tnenerlo en el propio directorio del proyecto.</p>
-      </div>
-    </section>
+    <h1 style="margin-bottom: 21px;">Tabla de empleados</h1>
+    <table id="employees">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Departamento</th>
+        <th>Salario</th>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>John Doe</td>
+        <td>Ventas</td>
+        <td>$45,000</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>Jane Smith</td>
+        <td>Recursos Humanos</td>
+        <td>$55,000</td>
+      </tr>
+      <tr>
+        <td>103</td>
+        <td>David Johnson</td>
+        <td>Desarrollo</td>
+        <td>$60,000</td>
+      </tr>
+      <tr>
+        <td>104</td>
+        <td>María Rodríguez</td>
+        <td>Marketing</td>
+        <td>$50,000</td>
+      </tr>
+    </table>
+
+    <h1 style="margin-bottom: 21px;">Tabla de productos</h1>
+    <table id="products">
+      <tr>
+        <th>Código del producto</th>
+        <th>Nombre del producto</th>
+        <th>Precio</th>
+      </tr>
+      <tr>
+        <td>001</td>
+        <td>Laptop HP EliteBook</td>
+        <td>$1,200</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>iPhone 13</td>
+        <td>$799</td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>Samsung 4K TV</td>
+        <td>$899</td>
+      </tr>
+      <tr>
+        <td>004</td>
+        <td>Mike Air Max 270</td>
+        <td>$150</td>
+      </tr>
+    </table>
   </main>
 
   <footer>
