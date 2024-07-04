@@ -6,27 +6,55 @@
   <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
   <link rel="stylesheet" href="../css/main.css">
   <style>
-    table {
-      width: 42%;
-      margin-bottom: 21px;
+    form {
+      width: 63%;
     }
 
-    table th { 
-      font-size: 21px;
+    form fieldset {
+      border: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    form fieldset.row {
+      flex-direction: row;
+    }
+
+    form fieldset legend {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    form fieldset label {
       padding: 7px;
+      font-size: 18px;
     }
-    table td { font-size: 14px;}
 
-    table#employees tr td:nth-child(4),
-    table#employees tr th:nth-child(4),
-    table#products tr th:nth-child(3),
-    table#products tr td:nth-child(3) {
-      background-color: gold;
+    form fieldset input {
+      font-size: 18px;
+      padding: 3px;
     }
+
+    form fieldset input.mult-select {
+      accent-color: gold;
+      margin-right: 7px;
+      height: 14px;
+      width: 14px;
+      border: none;
+    }
+
+    form fieldset textarea {
+      font-size: 18px;
+      padding: 3px;
+      margin-bottom: 21px;
+      border-radius: 7px;
+    }
+
   </style>
   <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
   
-  <title>Retos y ejercicios de HTML tablas | Teacher Maik en Academia X</title>
+  <title>Retos y ejercicios de HTML formularios | Teacher Maik en Academia X</title>
 </head>
 <body>
   
@@ -46,68 +74,9 @@
   </header>
 
   <main class="hero-mod">
-    <h1 style="margin-bottom: 21px;">Tabla de empleados</h1>
-    <table id="employees">
-      <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Departamento</th>
-        <th>Salario</th>
-      </tr>
-      <tr>
-        <td>101</td>
-        <td>John Doe</td>
-        <td>Ventas</td>
-        <td>$45,000</td>
-      </tr>
-      <tr>
-        <td>102</td>
-        <td>Jane Smith</td>
-        <td>Recursos Humanos</td>
-        <td>$55,000</td>
-      </tr>
-      <tr>
-        <td>103</td>
-        <td>David Johnson</td>
-        <td>Desarrollo</td>
-        <td>$60,000</td>
-      </tr>
-      <tr>
-        <td>104</td>
-        <td>María Rodríguez</td>
-        <td>Marketing</td>
-        <td>$50,000</td>
-      </tr>
-    </table>
-
-    <h1 style="margin-bottom: 21px;">Tabla de productos</h1>
-    <table id="products">
-      <tr>
-        <th>Código del producto</th>
-        <th>Nombre del producto</th>
-        <th>Precio</th>
-      </tr>
-      <tr>
-        <td>001</td>
-        <td>Laptop HP EliteBook</td>
-        <td>$1,200</td>
-      </tr>
-      <tr>
-        <td>002</td>
-        <td>iPhone 13</td>
-        <td>$799</td>
-      </tr>
-      <tr>
-        <td>003</td>
-        <td>Samsung 4K TV</td>
-        <td>$899</td>
-      </tr>
-      <tr>
-        <td>004</td>
-        <td>Mike Air Max 270</td>
-        <td>$150</td>
-      </tr>
-    </table>
+    <h1 style="margin-bottom: 21px;">Gracias por ser cómo eres</h1>
+    <h2>Pronto nos pondremos en contacto con usted</h2>
+    
   </main>
 
   <footer>

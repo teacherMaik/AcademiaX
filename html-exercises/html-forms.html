@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    form {
+      width: 63%;
+    }
+
+    form fieldset {
+      border: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    form fieldset.row {
+      flex-direction: row;
+    }
+
+    form fieldset legend {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    form fieldset label {
+      padding: 7px;
+      font-size: 18px;
+    }
+
+    form fieldset input {
+      font-size: 18px;
+      padding: 3px;
+    }
+
+    form fieldset input.mult-select {
+      accent-color: gold;
+      margin-right: 7px;
+      height: 14px;
+      width: 14px;
+      border: none;
+    }
+
+    form fieldset textarea {
+      font-size: 18px;
+      padding: 3px;
+      margin-bottom: 21px;
+      border-radius: 7px;
+    }
+
+  </style>
+  <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
+  
+  <title>Retos y ejercicios de HTML formularios | Teacher Maik en Academia X</title>
+</head>
+<body>
+  
+  <header>
+    <div class="navbar">
+      <div class="navbar-logo">
+        <h3>Teacher <span class="inline-gold">Maik</span></h3>
+        <h4>Aprendizajes en Academia X</h4>
+      </div>
+      <nav id="nav-container">
+        <ul id="nav-menu">
+          <li><a href="../">inicio</a></li>
+          <li><a href="./">volver a HTML</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero-mod">
+    <h1 style="margin-bottom: 21px;">Formularios en HTML</h1>
+    <form action="./submit.html">
+      <fieldset>
+        <legend>Datos Personales</legend>
+        <label for="name">Nombre:
+          <input id="name" name="name" type="text" placeholder="Nombre Completo">
+        </label>
+        <label for="email">Email:
+          <input id="email" name="email" type="email" placeholder="m@m.com">
+        </label>
+        <label for="phone">Teléfono:
+          <input id="phone" name="phone" type="tel" placeholder="+34-555-555-5555">
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Género</legend>
+        <label for="male">
+          <input class="mult-select" id="male" name="gender" type="radio">Masculino
+        </label>
+        <label for="female">
+          <input class="mult-select" id="female" name="gender" type="radio">Feminino
+        </label>
+        <label for="other">
+          <input class="mult-select" id="other" name="gender" type="radio">Otro
+        </label>
+      </fieldset>
+
+      <fieldset class="row">
+        <legend>Hobbies</legend>
+        <label for="sports">
+          <input class="mult-select" id="sports" name="sports" type="checkbox">Deportes
+        </label>
+        <label for="outdoors">
+          <input class="mult-select" id="outdoors" name="outdoors" type="checkbox">Outdoors
+        </label>
+        <label for="diy">
+          <input class="mult-select" id="diy" name="diy" type="checkbox">Manualidades
+        </label>
+        <label for="cooking">
+          <input class="mult-select" id="cooking" name="cooking" type="checkbox">Cocinar
+        </label>
+        <label for="games">
+          <input class="mult-select" id="games" name="games" type="checkbox">Juegos
+        </label>
+        <label for="party">
+          <input class="mult-select" id="party" name="party" type="checkbox">Fiesta
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Comentarios</legend>
+        <textarea name="comments" id="comments" rows="7" placeholder="Cuéntanos más sobre tí..."></textarea>
+      </fieldset>
+
+      <input id="submit" class="btn-black" type="submit" value="Enviar">
+    </form>
+    
+  </main>
+
+  <footer>
+    <div id="footer-container">
+      <div id="footer-social">
+        <a href="https://github.com/teacherMaik" class="fab fa-github fa-4x" target="_blank"></a>
+        <a href="https://x.com/TeacherMaik" class="fab fa-twitter fa-4x" target="_blank"></a>
+        <a href="https://www.instagram.com/teacherMaik" class="fab fa-instagram fa-4x" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/michael-thomas-bennett-6631822a/" class="fab fa-linkedin fa-4x" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCLTvAgvSy7ViRi7yAe0ogDA" class="fab fa-youtube fa-4x" target="_blank"></a>
+      </div>
+      <div id="footer-info">
+        <p>&copy;Michael Thomas Bennett</p>
+      </div>
+    </div>
+    <div id="footer-container">
+      <div id="my-webs">
+        <a href="https://ludotecaenlanube.com/">Ludoteca en la Nube</a>
+        <a href="https://www.vindrogames.com/">Vindrogames</a>
+        <a href="https://terraturca.es/">Terra Turca</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
