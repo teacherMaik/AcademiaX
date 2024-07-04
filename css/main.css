@@ -225,8 +225,7 @@ main.hero-mod section.exercises-nav nav ul li a.no-click:hover {
   color: black;
 }
 
-main.hero-mod section.exercises-nav .take-aways,
-main.hero-mod .take-aways {
+main.hero-mod section.exercises-nav .take-aways {
   width: 50%;
   height: auto;
   border-radius: 14px;
@@ -385,6 +384,20 @@ footer #my-webs a:hover {
   .btn-learning-card {
     font-size: 1.6rem;
   }
+
+  main.hero-mod {
+    padding: 120px 21px 0 21px;
+  }
+
+  main.hero-mod section.hero-mod-info h2 {
+    font-size: 2.4rem;
+  }
+
+  main.hero-mod section.exercises-nav {
+    flex-direction: column;
+    padding: 21px 7px;
+    gap: 21px;
+  }
 }
 
 @media (max-width: 678px) {
@@ -394,7 +407,6 @@ footer #my-webs a:hover {
 
   header ul#nav-menu {
     padding: 0;
-    flex-direction: column;
   }
 
   header ul#nav-menu li {
@@ -446,6 +458,27 @@ footer #my-webs a:hover {
     font-size: 1.4rem;
   }
 
+  main.hero-mod {
+    padding: 120px 21px 0 21px;
+  }
+
+  main.hero-mod section.hero-mod-info h1 {
+    font-size: 3.6rem;
+  }
+
+  main.hero-mod section.hero-mod-info h2 {
+    font-size: 1.8rem;
+  }
+
+  main.hero-mod section.hero-mod-info img {
+    width: 140px;
+    height: auto;
+  }
+
+  main.hero-mod section.exercises-nav .take-aways {
+    width: 100%;
+  }
+
   footer {
     flex-direction: column;
     justify-content: space-between;
@@ -480,6 +513,22 @@ footer #my-webs a:hover {
 }
 
 @media (max-width: 350px) {
+
+  header ul#nav-menu {
+    flex-direction: column;
+  }
+  
+  header .navbar-logo h3, header .navbar-logo h3 span { 
+    font-family: var(--title-font);
+    font-size: 2.1rem;
+  }
+  
+  header .navbar-logo h4 { 
+    font-family: var(--text-font);
+    font-size: 1.08rem;
+    font-weight: 200;
+  }
+
   section#hero-home {
     padding: 120px 7px 7px 7px;
     align-items: center;
@@ -524,9 +573,34 @@ footer #my-webs a:hover {
     font-size: 1.6rem;
   }
 
+  main.hero-mod {
+    padding: 120px 14px 0 14px;
+  }
+
+  main.hero-mod section.hero-mod-info h1 {
+    font-size: 3.6rem;
+  }
+
+  main.hero-mod section.hero-mod-info h2 {
+    font-size: 1.6rem;
+  }
+
+  main.hero-mod section.hero-mod-info img {
+    position: absolute;
+    right: 0;
+    top: 120px;
+    width: 42px;
+    height: auto;
+  }
+
+  main.hero-mod section.exercises-nav .take-aways {
+    padding: 14px;
+  }
+
   footer {
     padding: 14px 7px;
   }
+
   footer #footer-social a.fa-4x {
     font-size: 2em;
     margin: 0;
