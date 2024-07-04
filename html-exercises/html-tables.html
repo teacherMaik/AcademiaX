@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    main.hero-mod section.first-row, .second-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 21px;
+    }
+
+  </style>
+  <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
+  
+  <title>Retos y ejercicios de HTML multimedia texto | Teacher Maik en Academia X</title>
+</head>
+<body>
+  
+  <header>
+    <div class="navbar">
+      <div class="navbar-logo">
+        <h3>Teacher <span class="inline-gold">Maik</span></h3>
+        <h4>Aprendizajes en Academia X</h4>
+      </div>
+      <nav id="nav-container">
+        <ul id="nav-menu">
+          <li><a href="../">inicio</a></li>
+          <li><a href="./">volver a HTML</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero-mod">
+    <h1 style="margin-bottom: 21px; width: 100%; text-align: center;">Multimedia en HTML</h1>
+    <section class="first-row">
+      <div class="audio">
+        <h2 style="margin-bottom: 14px;">Pistas de audio</h2>
+        <audio 
+          style="margin-bottom: 42px;" 
+          src="html-mod-assets/Record (online-voice-recorder.com).mp3" 
+          controls>
+        </audio>
+      </div>
+      <div class="video">
+        <h2 style="margin-bottom: 14px;">Un vídeo desde el propio proyecto</h2>
+        <video style="width: 560px; height: 315px" src="html-mod-assets/Escape the Cloud Trailor.mp4" controls></video>
+      </div>
+    </section>
+    <section class="second-row">
+      <div class="iframe">
+        <h2 style="margin-bottom: 14px;">El mismo vídeo pero desde un iframe</h2>
+        <iframe style="margin-bottom: 14px; border-radius: 7px;"width="560" height="315" src="https://www.youtube.com/embed/ZwyAUVebZM0?si=yajRd5DbPPcdCU_F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div style="margin: 21px 0 21px 21px;" class="take-aways">
+        <p style="font-size: 16px; margin-bottom: 14px;">La verdad que no aprendí demasiado nuevo con este módulo. Al trabajar con HTML uno se va dando cuenta de que es bastante rutinario, al menos en su estado puro, de manera que se escribe muy parecido a los demás elementos de html solo que con diferentes atributos</p>
+        <p style="font-size: 16px; margin-bottom: 14px;">Me gustaría conocer ventajas a nivel de rendering si es mejor tener un vídeo alojado en un servicio de teceros, como youtube, o tnenerlo en el propio directorio del proyecto.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-container">
+      <div id="footer-social">
+        <a href="https://github.com/teacherMaik" class="fab fa-github fa-4x" target="_blank"></a>
+        <a href="https://x.com/TeacherMaik" class="fab fa-twitter fa-4x" target="_blank"></a>
+        <a href="https://www.instagram.com/teacherMaik" class="fab fa-instagram fa-4x" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/michael-thomas-bennett-6631822a/" class="fab fa-linkedin fa-4x" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCLTvAgvSy7ViRi7yAe0ogDA" class="fab fa-youtube fa-4x" target="_blank"></a>
+      </div>
+      <div id="footer-info">
+        <p>&copy;Michael Thomas Bennett</p>
+      </div>
+    </div>
+    <div id="footer-container">
+      <div id="my-webs">
+        <a href="https://ludotecaenlanube.com/">Ludoteca en la Nube</a>
+        <a href="https://www.vindrogames.com/">Vindrogames</a>
+        <a href="https://terraturca.es/">Terra Turca</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
