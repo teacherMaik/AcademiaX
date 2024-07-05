@@ -310,6 +310,41 @@ section#my-learnings-gallery .mod-card img {
   overflow-x: scroll;
 }
 
+main.hero-mod section.js-code {
+  background-color: gold;
+  color: black;
+  border-radius: 14px;
+  overflow: scroll;
+  margin-bottom: 42px;
+}
+
+main.hero-mod section.run-code {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+main.hero-mod section.run-code button {
+  width: 210px;
+  height: 42px;
+  padding: 7px;
+}
+
+main.hero-mod section.run-code .display-terminal {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  color: gold;
+  padding: 21px;
+  overflow: scroll;
+  margin-bottom: 21px;
+}
+
+main.hero-mod section.run-code .display-terminal p {
+  font-size: 1.6rem;
+}
+
 footer {
   position: relative;
   width: 100%;

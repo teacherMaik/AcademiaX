@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
+  <style>
+    main.hero-mod {
+      min-height: 100vh;
+      padding: 120px 42px 42px 42px
+    }
+
+    main.hero-mod section.run-code {
+      gap: 21px;
+    }
+    
+    main.hero-mod section.run-code .display-terminal {
+      height: 420px;
+    }
+
+  </style>
+  <title>Retos y ejercicios de javascript bucles | Teacher Maik en Academia X</title>
+</head>
+<body>
+  
+  <header>
+    <div class="navbar">
+      <div class="navbar-logo">
+        <h3>Teacher <span class="inline-gold">Maik</span></h3>
+        <h4>Aprendizajes en Academia X</h4>
+      </div>
+      <nav id="nav-container">
+        <ul id="nav-menu">
+          <li><a href="../">inicio</a></li>
+          <li><a href="./">volver a JS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero-mod">
+    <section class="js-code">
+      <pre>
+        <code>
+          for (var i = 1; i <= 15; i++) {
+            console.log(i);
+          }
+          
+          console.log(`----------------------------`);
+          
+          const colors = ['red', 'yellow', 'blue', 'brown'];
+          
+          for (let color of colors) {
+            console.log(color);
+          }
+          
+          console.log(`----------------------------`);
+          
+          const person = {
+            name: 'María',
+            person: 27,
+            profession: 'Diseñadora',
+          };
+          
+          for (let att in person) {
+            console.log(`${att}: ${person[att]}`);
+          }
+          
+          console.log(`----------------------------`);
+          
+          let numSquared = 1;
+          while (numSquared * numSquared < 100) {
+            numSquared++;
+          }
+          
+          console.log(`El número más cercano a 100 cuyo cuadrado es menor o igual a 100 es: ${numSquared}`);
+          
+          console.log(`----------------------------`);
+          
+          let j = 1;
+          do {
+            if (j % 2 === 0) {
+              console.log(`${j} es un número par`);
+            }
+            j++;
+          } while (j <= 10);
+        </code>
+      </pre>
+    </section>
+    <section class="run-code">
+      <button class="run-code-btn btn-black">Ejecutar Script</button>
+      <div class="display-terminal"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-container">
+      <div id="footer-social">
+        <a href="https://github.com/teacherMaik" class="fab fa-github fa-4x" target="_blank"></a>
+        <a href="https://x.com/TeacherMaik" class="fab fa-twitter fa-4x" target="_blank"></a>
+        <a href="https://www.instagram.com/teacherMaik" class="fab fa-instagram fa-4x" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/michael-thomas-bennett-6631822a/" class="fab fa-linkedin fa-4x" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCLTvAgvSy7ViRi7yAe0ogDA" class="fab fa-youtube fa-4x" target="_blank"></a>
+      </div>
+      <div id="footer-info">
+        <p>&copy;Michael Thomas Bennett</p>
+      </div>
+    </div>
+    <div id="footer-container">
+      <div id="my-webs">
+        <a href="https://ludotecaenlanube.com/">Ludoteca en la Nube</a>
+        <a href="https://www.vindrogames.com/">Vindrogames</a>
+        <a href="https://terraturca.es/">Terra Turca</a>
+      </div>
+    </div>
+  </footer>
+  <script src="loops.js" type="text/javascript"></script>
+</body>
+</html>
