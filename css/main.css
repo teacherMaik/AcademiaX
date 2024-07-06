@@ -337,6 +337,7 @@ main.hero-mod section.run-code .display-terminal {
   height: 200px;
   background-color: black;
   color: gold;
+  font-size: 1.6rem;
   padding: 21px;
   overflow: scroll;
   margin-bottom: 21px;

@@ -45,5 +45,8 @@ const displayTerminal = document.querySelector('.display-terminal');
 
 runBtn.addEventListener('click', (e) => {
 
+  displayTerminal.innerHTML = '';
   appendParagraph()
 });
+
+//export default appendParagraph;

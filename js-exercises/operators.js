@@ -39,17 +39,6 @@ function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function appendParagraph() {
-
-  for (let i = 0; i < printArr.length; i++) {
-    const p = document.createElement('p');
-    p.textContent = printArr[i];
-    displayTerminal.appendChild(p);
-
-    await delay(1000);
-  }
-}
-
 runBtn.addEventListener('click', async (e) => {
 
   displayTerminal.innerHTML = 
@@ -165,3 +154,5 @@ runBtn.addEventListener('click', async (e) => {
     `>La división de 10 / 3: ${10 / 3} <br />` +
     `>10 % 3: ${10 % 3} <br />`;
 });
+
+//export default delay;

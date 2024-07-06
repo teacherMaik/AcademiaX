@@ -1,0 +1,12 @@
+{
+  "name": "academiax",
+  "version": "1.0.0",
+  "description": "Repositorio de todos los ejercicios y retos de la academia de programación AcademiaX",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

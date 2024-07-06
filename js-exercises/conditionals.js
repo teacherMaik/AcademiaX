@@ -92,4 +92,6 @@ window.addEventListener('keypress', async (e) => {
     printAll();
   }
   
-})
+});
+
+//export default printAll;
