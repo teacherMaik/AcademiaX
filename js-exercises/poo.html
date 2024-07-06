@@ -6,7 +6,7 @@
   <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
   <link rel="stylesheet" href="../css/main.css">
   <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
-  <title>Retos y ejercicios de javascript | Teacher Maik en Academia X</title>
+  <title>Retos y ejercicios de programación orientada a objetos en javascript | Teacher Maik en Academia X</title>
 </head>
 <body>
   
@@ -19,37 +19,60 @@
       <nav id="nav-container">
         <ul id="nav-menu">
           <li><a href="../">inicio</a></li>
-          <li><a class="current" href="javascript:;">HTML</a></li>
+          <li><a href="./">volver a JS</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="hero-mod">
-    <section class="hero-mod-info">
-      <div class="hero-mod-info-text">
-        <h1>HTML5</h1>
-        <h2>Al comenzar este Bootcamp, ya tenía bastantes conocimientos de esta herramienta, habiendo programado juegos y webs. Aún así siempre hay algo que aprender y acá comparto mis ejercicios.</h2>
-      </div>
-      <img src="../img/javascript-svgrepo-com.svg" alt="html logo">
+    <section class="js-code">
+      <pre>
+        <code>
+          class Vehicle {
+
+            constructor(numWheels) {
+              this.numWheels = numWheels
+            }
+          
+            printInfo() {
+              return `Este vehículo tiene ${this.numWheels} ruedas.`;
+            }
+          }
+          
+          class VehiclePassengers extends Vehicle {
+          
+            constructor(numWheels, numPassengers) {
+              super(numWheels);
+              this.numPassengers = numPassengers
+            }
+          
+            printInfo() {
+              return `Este vehículo tiene ${this.numWheels} ruebdas y puede transportar ${this.numPassengers}.`
+            }
+          }
+          
+          const fourWheels = new Vehicle(4);
+          const twoWheels = new Vehicle(2);
+          
+          console.log(fourWheels);
+          console.log(fourWheels.printInfo());
+          console.log(twoWheels);
+          console.log(twoWheels.printInfo())
+          
+          const sixPassengers = new VehiclePassengers(fourWheels.numWheels, 6);
+          const onePassenger = new VehiclePassengers(twoWheels.numWheels, 1);
+          
+          console.log(sixPassengers);
+          console.log(sixPassengers.printInfo());
+          console.log(onePassenger);
+          console.log(onePassenger.printInfo());
+        </code>
+      </pre>
     </section>
-    <section class="exercises-nav">
-      <nav>
-        <h3>Retos del curso</h3>
-        <ul>
-          <li><a href="var-datos.html">Variables y datos</a></li>
-          <li><a href="operators.html">Operadores</a></li>
-          <li><a href="conditionals.html">Condicionales</a></li>
-          <li><a href="loops.html">Bucles</a></li>
-          <li><a class="no-click" href="javascript:;">Funciones (para simular terminal con los retos)</a></li>
-          <li><a href="poo.html">Programación Orientada a Objetos</a></li>
-          <li><a href="html-forms.html">Formularios</a></li>
-        </ul>
-      </nav>
-      <div class="take-aways">
-        <p style="font-size: 16px; margin-bottom: 14px;">De este curso destacaría conocer el uso de citas, etiquetas para código, srcsets para imágenes, estructuración de datos con tablas y los diferentes inputs y sus atributos para los formularios.</p>
-        <p style="font-size: 16px; margin-bottom: 14px;">Me gustaría aprender más sobre accesibilidad, en específico los atributos <em style="font-size: 16px; font-weight: 600;">aria-label</em>, y diseñar mejores experiencias de usuario.</p>
-      </div>
+    <section class="run-code">
+      <button class="run-code-btn btn-black">Ejecutar Script</button>
+      <div class="display-terminal"></div>
     </section>
   </main>
 
@@ -74,6 +97,6 @@
       </div>
     </div>
   </footer>
-
+  <script src="poo.js" type="text/javascript"></script>
 </body>
 </html>

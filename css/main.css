@@ -329,6 +329,7 @@ main.hero-mod section.run-code button {
   width: 210px;
   height: 42px;
   padding: 7px;
+  margin-bottom: 21px;
 }
 
 main.hero-mod section.run-code .display-terminal {
