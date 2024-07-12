@@ -94,14 +94,15 @@ ul { list-style: none; }
 header {
   position: fixed;
   width: 100%;
-  height: 90px;
+  height: 70px;
   z-index: 2;
 }
 
 header .navbar {
+  position: relative;
   width: 100%;
   height: 100%;
-  padding: 21px 0;
+  padding: 3px 0;
   background-color: black;
   color: white;
   display: flex;
@@ -123,92 +124,131 @@ header .navbar-logo h4 {
   font-size: 1.35rem;
 }
 
-header ul#nav-menu {
-  display: flex;
-  justify-content: space-between;
-}
-
-header ul#nav-menu li {
-  padding: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header ul#nav-menu li a {
+header .navbar nav#nav-container ul#main-nav-menu {
   position: relative;
-  padding: 7px;
-  font-size: 1.8rem;
+  display: flex;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li {
+  position: relative;
+  padding: 3px;
+  margin: 14px;
   border-bottom: 3px solid transparent;
 }
 
-header ul#nav-menu li a.current,
-header ul#nav-menu li a:hover {
+header .navbar nav#nav-container ul#main-nav-menu li:hover {
   border-bottom: 3px solid gold;
 }
 
-header ul#nav-menu li a i {
-  color: gold;
-}
-
-header ul#nav-menu li#ham-btn {
+header .navbar nav#nav-container ul#main-nav-menu li#drop-nav-container {
   padding: 0;
+  margin: 0;
+  border-bottom: 0;
+  width: 70px;
+  height: 70px;
 }
 
-header ul#nav-menu li button {
-  position: relative;
-  border: none;
-  background-color: red;
-  width: 90px;
-  height: 90px;
-  display: flex;
-  flex-direction: center;
-  align-items: center;
+header .navbar nav#nav-container ul#main-nav-menu li a {
+  color: white;
+  font-family: var(--title-font);
+  font-size: 18px;
 }
 
-header ul#nav-menu li button .hamburger-overlay {
+header .navbar nav#nav-container ul#main-nav-menu li #hamburger {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: black;
+  height: 70px;
+  width: 70px;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li #hamburger.nav-open {
+  background-color: gold;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line {
+  position: absolute;
+  left: 21px;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: white;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.mid {
+  display: block;
+  top: 33.5px;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.mid.nav-open {
+  display: none;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.top {
+  top: 25px;
+  transition: 0.42s ease;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.top.nav-open {
+  top: 33.5px;
+  background-color: black;
+  transform: rotate(405deg);
+  transition: 0.42s ease;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.bot {
+  top: 42px;
+  transition: 0.42s ease;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.bot.nav-open {
+  top: 33.5px;
+  background-color: black;
+  transform: rotate(-405deg);
+  transition: 0.42s ease;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li #hamburger-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height:  70px;
+  width: 70px;
   background-color: transparent;
+  border: none;
   cursor: pointer;
-  z-index: 2;
 }
 
-header ul#nav-menu li button .hamburger-container {
+header .navbar nav#nav-container ul#main-nav-menu li ul#drop-nav-menu {
   position: absolute;
-  width: 42px;
-  height: 42px;
-  top: 24px;
-  left: 24px;
+  top: 70px;
+  right: 0px;
+  width: 280px;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.42s ease;
+  background-color: gold;border-bottom-left-radius: 7px;
+  box-shadow: 3px 3px 21px black;
 }
 
-header ul#nav-menu li button .hamburger-container .ham-line {
-  position: absolute;
-  width: 100%;
-  background-color: black;
-  height: 4px;
-  top: 19px;
+header .navbar nav#nav-container ul#main-nav-menu li ul#drop-nav-menu.nav-open {
+  height: calc(100vh - 84px);
+  transition: 0.42s ease;
 }
 
-header ul#nav-menu li button .hamburger-container .ham-line::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  background-color: black;
-  height: 4px;
-  left: 0;
-  top: 14px;
+header .navbar nav#nav-container ul#main-nav-menu li ul#drop-nav-menu li {
+  padding: 3px;
+  margin: 14px;
+  border-bottom: 3px solid transparent;
 }
 
-header ul#nav-menu li button .hamburger-container .ham-line::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  background-color: black;
-  height: 4px;
-  left: 0;
-  top: -14px;
+header .navbar nav#nav-container ul#main-nav-menu li ul#drop-nav-menu li:hover {
+  border-bottom: 3px solid black;
+}
+
+header .navbar nav#nav-container ul#main-nav-menu li ul#drop-nav-menu li a {
+  color: black;
 }
 
 /* Hero Home */
@@ -304,7 +344,7 @@ main.hero-mod section.exercises-nav .take-aways {
 /* Page content sections */
 section#my-learnings-gallery {
   position: relative;
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - 70px);
   width: 100%;
   background-color: gold;
   padding: 42px;

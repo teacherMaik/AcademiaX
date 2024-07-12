@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
+  <title>Retos fetch y async con javascript | Teacher Maik en Academia X</title>
+</head>
+<body>
+  
+  <header>
+    <div class="navbar">
+      <div class="navbar-logo">
+        <h3>Teacher <span class="inline-gold">Maik</span></h3>
+        <h4>Aprendizajes en Academia X</h4>
+      </div>
+      <nav id="nav-container">
+        <ul id="nav-menu">
+          <li><a href="../">inicio</a></li>
+          <li><a href="./">volver a JS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero-mod">
+    <section class="js-code">
+      <pre>
+        <code>
+          class Vehicle {
+
+            constructor(numWheels) {
+              this.numWheels = numWheels
+            }
+          
+            printInfo() {
+              return `Este vehículo tiene ${this.numWheels} ruedas.`;
+            }
+          }
+          
+          class VehiclePassengers extends Vehicle {
+          
+            constructor(numWheels, numPassengers) {
+              super(numWheels);
+              this.numPassengers = numPassengers
+            }
+          
+            printInfo() {
+              return `Este vehículo tiene ${this.numWheels} ruebdas y puede transportar ${this.numPassengers}.`
+            }
+          }
+          
+          const fourWheels = new Vehicle(4);
+          const twoWheels = new Vehicle(2);
+          
+          console.log(fourWheels);
+          console.log(fourWheels.printInfo());
+          console.log(twoWheels);
+          console.log(twoWheels.printInfo())
+          
+          const sixPassengers = new VehiclePassengers(fourWheels.numWheels, 6);
+          const onePassenger = new VehiclePassengers(twoWheels.numWheels, 1);
+          
+          console.log(sixPassengers);
+          console.log(sixPassengers.printInfo());
+          console.log(onePassenger);
+          console.log(onePassenger.printInfo());
+        </code>
+      </pre>
+    </section>
+    <section class="run-code">
+      <button class="run-code-btn btn-black">Ejecutar Script</button>
+      <div class="display-terminal"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-container">
+      <div id="footer-social">
+        <a href="https://github.com/teacherMaik" class="fab fa-github fa-4x" target="_blank"></a>
+        <a href="https://x.com/TeacherMaik" class="fab fa-twitter fa-4x" target="_blank"></a>
+        <a href="https://www.instagram.com/teacherMaik" class="fab fa-instagram fa-4x" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/michael-thomas-bennett-6631822a/" class="fab fa-linkedin fa-4x" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCLTvAgvSy7ViRi7yAe0ogDA" class="fab fa-youtube fa-4x" target="_blank"></a>
+      </div>
+      <div id="footer-info">
+        <p>&copy;Michael Thomas Bennett</p>
+      </div>
+    </div>
+    <div id="footer-container">
+      <div id="my-webs">
+        <a href="https://ludotecaenlanube.com/">Ludoteca en la Nube</a>
+        <a href="https://www.vindrogames.com/">Vindrogames</a>
+        <a href="https://terraturca.es/">Terra Turca</a>
+      </div>
+    </div>
+  </footer>
+  <script src="poo.js" type="text/javascript"></script>
+</body>
+</html>

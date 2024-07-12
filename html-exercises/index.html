@@ -17,9 +17,28 @@
         <h4>Aprendizajes en Academia X</h4>
       </div>
       <nav id="nav-container">
-        <ul id="nav-menu">
-          <li><a href="../">inicio</a></li>
-          <li><a class="current" href="javascript:;">HTML</a></li>
+        <ul id="main-nav-menu">
+          <li><a href="/">inicio</a></li>
+          <li id="drop-nav-container" role="navigation">
+            <div id="hamburger">
+              <div class="hamburger-line top"></div>
+              <div class="hamburger-line mid"></div>
+              <div class="hamburger-line bot"></div>
+            </div>
+            <button id="hamburger-btn"></button>
+            <ul id="drop-nav-menu">
+              <li><a href="/css-exercises/">css</a></li>
+              <li><a href="/js-exercises/">javascript</a></li>
+              <li><a href="/">sql</a></li>
+              <li><a href="/">react</a></li>
+              <li><a href="/">angular</a></li>
+              <li><a href="/">node</a></li>
+              <li><a href="/">express</a></li>
+              <li><a href="/">python</a></li>
+              <li><a href="/">django</a></li>
+              <li><a href="/">despegamos</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
@@ -75,5 +94,6 @@
     </div>
   </footer>
 
+  <script src="/utils.js" type="text/javascript"></script>
 </body>
 </html>
