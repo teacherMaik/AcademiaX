@@ -127,12 +127,14 @@ header .navbar-logo h4 {
 header .navbar nav#nav-container ul#main-nav-menu {
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header .navbar nav#nav-container ul#main-nav-menu li {
   position: relative;
   padding: 3px;
-  margin: 14px;
+  margin: 14px 7px;
   border-bottom: 3px solid transparent;
 }
 
@@ -249,6 +251,10 @@ header .navbar nav#nav-container ul#main-nav-menu li ul#drop-nav-menu li:hover {
 
 header .navbar nav#nav-container ul#main-nav-menu li ul#drop-nav-menu li a {
   color: black;
+}
+
+.show-320 {
+  display: none;
 }
 
 /* Hero Home */
@@ -384,33 +390,6 @@ section#my-learnings-gallery .mod-card {
 section#my-learnings-gallery .mod-card img {
   width: 180px;
   height: auto;
-}
-
-.text-container-book {
-  width: 84%;
-  padding: 21px;
-  background-color: lightgrey;
-  border-radius: 7px;
-  margin-bottom: 14px;
-}
-
-.text-container-book h4 {
-  margin-bottom: 14px;
-}
-
-.text-container-book ul li q {
-  font-size: 1.9rem;
-  font-style: italic;
-}
-
-.html-text-ex-code {
-  max-width: 30%;
-  height: 400px;
-  padding: 21px;
-  border-radius: 7px;
-  background-color: black;
-  color: white;
-  overflow-x: scroll;
 }
 
 main.hero-mod section.js-code {
@@ -611,21 +590,92 @@ footer #my-webs a:hover {
 }
 
 @media (max-width: 576px) {
-  header .navbar {
-    padding: 7px 0;
+  header {
+    height: 50px;
   }
-
-  header ul#nav-menu {
-    padding: 0;
+  
+  header .navbar-logo {
+    margin-left: 14px;
   }
-
-  header ul#nav-menu li {
-    padding: 0;
-    justify-content: flex-end;
+  
+  header .navbar-logo h3, header .navbar-logo h3 span { 
+    font-size: 2.1rem;
   }
-
-  header ul#nav-menu li a {
-    padding: 3px 7px 7px 7px;
+  
+  header .navbar-logo h4 { 
+    font-size: 1rem;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li {
+    margin: 7px 3px;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li#drop-nav-container {
+    width: 50px;
+    height: 50px;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li a {
+    font-size: 16px;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li #hamburger {
+    height: 50px;
+    width: 50px;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li #hamburger.nav-open {
+    background-color: gold;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line {
+    position: absolute;
+    left: 14px;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.mid {
+    display: block;
+    top: 16px;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.mid.nav-open {
+    display: none;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.top {
+    top: 24px;
+    transition: 0.42s ease;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.top.nav-open {
+    top: 24px;
+    background-color: black;
+    transform: rotate(405deg);
+    transition: 0.42s ease;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.bot {
+    top: 32px;
+    transition: 0.42s ease;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li #hamburger .hamburger-line.bot.nav-open {
+    top: 24px;
+    background-color: black;
+    transform: rotate(-405deg);
+    transition: 0.42s ease;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li #hamburger-btn {
+    height: 50px;
+    width: 50px;
+  }
+  
+  header .navbar nav#nav-container ul#main-nav-menu li ul#drop-nav-menu {
+    top: 50px;
   }
 
   section#hero-home {
@@ -698,20 +748,20 @@ footer #my-webs a:hover {
 }
 
 @media (max-width: 320px) {
-
-  header ul#nav-menu {
-    flex-direction: column;
+  header .navbar nav#nav-container ul#main-nav-menu li ul#drop-nav-menu {
+    width: 200px;
   }
 
-  header .navbar-logo h3, header .navbar-logo h3 span { 
-    font-family: var(--title-font);
-    font-size: 2.1rem;
+  header .navbar nav#nav-container ul#main-nav-menu li a {
+    font-size: 14px;
   }
-  
-  header .navbar-logo h4 { 
-    font-family: var(--text-font);
-    font-size: 1.08rem;
-    font-weight: 200;
+
+  .hide-320 {
+    display: none;
+  }
+
+  .show-320 {
+    display: block;
   }
 
   section#hero-home {

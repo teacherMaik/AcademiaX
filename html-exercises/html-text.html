@@ -8,52 +8,56 @@
   <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
   <style>
 
+    section.hero-mod-info {
+      gap: 21px;
+    }
+
     .html-text-ex-info {
-      width: 80%; 
-      position: relative
-    }
-
-    span.madrid {
-      font-size: 42px;
-      background-color: gold;
-      color: black;
-      border-radius: 3px;
-      padding: 7px;
-      box-shadow: 1px 1px 7px black;
-    }
-
-    .hero-mod-info {
-      padding-top: 42px;
-      margin-bottom: 0;
-    }
-
-    .html-text-ex-info p {
-      margin-bottom: 21px;
+      flex-grow: 1
     }
 
     ul.madrid {
       position: relative;
-      width: 84%;
       left: 42px;
       list-style: circle;
-      margin-bottom: 21px;
+      color: blue;
+      margin-bottom: 7px;
     }
-
-
 
     ul.madrid li a {
       color: black;
-      font-size: 14px;
-    }
-
-    ul.madrid li a:hover {
+      font-size: 18px;
       color: blue;
     }
 
     .madrid-quote {
-      margin-bottom: 21px;;
+      background-color: darkgrey;
+      padding: 7px;
+      border-radius: 7px;
+      margin-bottom: 7px;
     }
 
+    .html-text-ex-code {
+      width: 40%;
+      background-color: black;
+      border-radius: 7px;
+      padding: 14px;
+      height: 300px;
+    }
+
+    pre {
+      overflow: scroll;
+    }
+
+    @media (max-width: 576px) {
+      section.hero-mod-info {
+        flex-direction: column;
+      }
+
+      .html-text-ex-code {
+        width: 100%;
+      }      
+    }
   </style>
   <title>Retos y ejercicios de html texto | Teacher Maik en Academia X</title>
 </head>
@@ -67,7 +71,7 @@
       </div>
       <nav id="nav-container">
         <ul id="main-nav-menu">
-          <li><a href="/">inicio</a></li>
+          <li class="hide-320"><a href="/">inicio</a></li>
           <li><a href="./">volver</a></li>
           <li id="drop-nav-container" role="navigation">
             <div id="hamburger">
@@ -77,6 +81,7 @@
             </div>
             <button id="hamburger-btn"></button>
             <ul id="drop-nav-menu">
+              <li class="show-320"><a href="/">inicio</a></li>
               <li><a href="/css-exercises/">css</a></li>
               <li><a href="/js-exercises/">javascript</a></li>
               <li><a href="/">sql</a></li>
@@ -97,13 +102,11 @@
   <main class="hero-mod">
     <section class="hero-mod-info">
       <div class="html-text-ex-info">
-        <h1>Conoce Mi Ciudad Favorita: 
-          <span class="madrid">Madrid</span>
-        </h1>
-        <p>Descubre por qué amo esta ciudad</p>
-        <h2>Descripción de Madrid</h2>
-        <p>Madrid es una ciudad maravillosa para visitar. Está ubicado en el centro de la península ibérica y cuenta con muchos bares, restaurantes y lugares históricos.</p>
-        <h3>Lugares de interés en Madrid</h3>
+        <h1>Conoce Mi Ciudad Favorita</h1>
+        <p style="margin-bottom: 7px">Descubre por qué amo esta ciudad</p>
+        <h2 style="margin-bottom: 7px">Descripción de Madrid</h2>
+        <p style="margin-bottom: 7px">Madrid es una ciudad maravillosa para visitar. Está ubicado en el centro de la península ibérica y cuenta con muchos bares, restaurantes y lugares históricos.</p>
+        <h3 style="margin-bottom: 7px">Lugares de interés en Madrid</h3>
         <ul class="madrid">
           <li><a href="https://www.esmadrid.com/informacion-turistica/parque-del-retiro" target="_blank">Parque del retiro</a></li>
           <li><a href="https://www.esmadrid.com/informacion-turistica/museo-del-prado" target="_blank">Museo del Prado</a></li>
@@ -125,9 +128,9 @@
       </div>
       <div class="html-text-ex-code">
 <h3 style="color: gold; margin-bottom: 3px;">Ejercicio Extra</h3>
-<p style="font-size: 12px; margin-bottom: 3px;">Aquí puedes ver el código para la frase celebre utilizando <span style="color: gold; font-size: 12px;">&lt;code&gt;</span> tag</p>
+<p style="font-size: 12px; margin-bottom: 3px; color: white;">Aquí puedes ver el código para la frase celebre utilizando <span style="color: gold; font-size: 12px;">&lt;code&gt;</span> tag</p>
 <pre>
-  <code style="overflow-x: scroll;">
+  <code style="color: white;">
     &lt;div class="madrid-quote"&gt;
       &lt;h3&gt;Una frase celebre&lt;/h3&gt;
       &lt;div class="text-container-book"&gt;
