@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
+  <title>Retos y ejercicios de jcss colores | Teacher Maik en Academia X</title>
+</head>
+<body>
+  
+  <header>
+    <div class="navbar">
+      <div class="navbar-logo">
+        <h3>Teacher <span class="inline-gold">Maik</span></h3>
+        <h4>Aprendizajes en Academia X</h4>
+      </div>
+      <nav id="nav-container">
+        <ul id="main-nav-menu">
+          <li class="hide-320"><a href="/">inicio</a></li>
+          <li><a href="./">volver</a></li>
+          <li id="drop-nav-container" role="navigation">
+            <div id="hamburger">
+              <div class="hamburger-line top"></div>
+              <div class="hamburger-line mid"></div>
+              <div class="hamburger-line bot"></div>
+            </div>
+            <button id="hamburger-btn"></button>
+            <ul id="drop-nav-menu">
+              <li class="show-320"><a href="/">inicio</a></li>
+              <li><a href="/html-exercises/">html</a></li>
+              <li><a href="/css-exercises/">css</a></li>
+              <li><a href="/">sql</a></li>
+              <li><a href="/">react</a></li>
+              <li><a href="/">angular</a></li>
+              <li><a href="/">node</a></li>
+              <li><a href="/">express</a></li>
+              <li><a href="/">python</a></li>
+              <li><a href="/">django</a></li>
+              <li><a href="/">despegamos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero-mod">
+    <section class="js-code">
+      <pre>
+        <code>
+          const age = 42;
+          const action = 'crear';
+          const num = 21;
+
+          if (age >= 18) {
+            console.log(`Tienes ${age} años y eres mayor de edad`);
+          } else {
+            console.log(`Tienes ${age} años y eres menor de edad`);
+          }
+
+          switch (action) {
+            case 'crear':
+              console.log(`La acción es ${action}`);
+              break;
+
+            case 'colocar':
+              console.log(`La acción es ${action}`);
+              break;
+
+            case 'actualizar':
+              console.log(`La acción es ${action}`);
+              break;
+
+            case 'borrar':
+              console.log(`La acción es ${action}`);
+              break;
+          }
+
+          num % 2 == 0 ? console.log(`${num} es un número par`) : console.log(`${num} es un número impar`);
+        </code>
+      </pre>
+    </section>
+    <section class="run-code">
+      <div class="run-code-with-fields">
+        <button class="run-code-btn btn-black" style="align-self: center;">Ejecutar Script</button>
+        <div class="run-code-fields">
+          <div class="field-1">
+            <label for="age">Cambia la edad:</label>
+            <input id="age" type="number" value="42">
+          </div>
+          <div class="field-2">
+            <label for="action">Cambia la acción:</label>
+            <input id="action" type="text" value="crear">
+          </div>
+          <div class="field-3">
+            <label for="number">Cambia el número:</label>
+            <input id="number" type="number" value="21">
+          </div>
+        </div>
+      </div>
+      <div class="display-terminal"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-container">
+      <div id="footer-social">
+        <a href="https://github.com/teacherMaik" class="fab fa-github fa-4x" target="_blank"></a>
+        <a href="https://x.com/TeacherMaik" class="fab fa-twitter fa-4x" target="_blank"></a>
+        <a href="https://www.instagram.com/teacherMaik" class="fab fa-instagram fa-4x" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/michael-thomas-bennett-6631822a/" class="fab fa-linkedin fa-4x" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCLTvAgvSy7ViRi7yAe0ogDA" class="fab fa-youtube fa-4x" target="_blank"></a>
+      </div>
+      <div id="footer-info">
+        <p>&copy;Michael Thomas Bennett</p>
+      </div>
+    </div>
+    <div id="footer-container">
+      <div id="my-webs">
+        <a href="https://ludotecaenlanube.com/">Ludoteca en la Nube</a>
+        <a href="https://www.vindrogames.com/">Vindrogames</a>
+        <a href="https://terraturca.es/">Terra Turca</a>
+      </div>
+    </div>
+  </footer>
+  <script src="conditionals.js" type="text/javascript"></script>
+  <script src="/utils.js" type="text/javascript"></script>
+</body>
+</html>
