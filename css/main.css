@@ -313,7 +313,10 @@ main.hero-mod section.exercises-nav {
   padding: 21px;
 }
 
-main.hero-mod section.exercises-nav nav {position: relative;}
+main.hero-mod section.exercises-nav nav {
+  position: relative;
+  margin-right: 14px;
+}
 
 main.hero-mod section.exercises-nav nav ul {
   position: relative;
@@ -427,6 +430,48 @@ main.hero-mod section.run-code .display-terminal {
 
 main.hero-mod section.run-code .display-terminal p {
   font-size: 1.6rem;
+}
+
+main.hero-mod section.pallete-intro {
+  margin-bottom: 21px;
+}
+
+main.hero-mod section.palletes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+
+.pallete-card {
+  aspect-ratio: 1/1;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.pallete-card h3 {
+  align-self: flex-end;
+}
+
+.pallete-card h3 {
+  font-size: 1.8rem;
+}
+
+.pallete-card .pallete-box {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  font-size: 2.1rem;
+}
+
+.pallete-card .pallete-box.dark:hover {
+  color: white;
+}
+
+.pallete-card .pallete-box.light:hover {
+  color: black;
 }
 
 footer {
