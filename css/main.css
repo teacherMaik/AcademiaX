@@ -436,6 +436,14 @@ main.hero-mod section.pallete-intro {
   margin-bottom: 21px;
 }
 
+main.hero-mod section.pallete-intro h1 {
+  margin-bottom: 14px;
+}
+
+main.hero-mod section.pallete-intro a {
+  font-size: 2.8rem;
+}
+
 main.hero-mod section.palletes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -599,6 +607,28 @@ footer #my-webs a:hover {
   main.hero-mod section.exercises-nav .take-aways {
     width: 50%;
     padding: 14px;
+  }
+
+  main.hero-mod section.pallete-intro {
+    margin-bottom: 21px;
+  }
+
+  main.hero-mod section.pallete-intro h1 {
+    font-size: 2.8rem;
+    margin-bottom: 14px;
+  }
+
+  main.hero-mod section.pallete-intro h2 {
+    font-size: 2.1rem;
+  }
+
+  main.hero-mod section.pallete-intro a {
+    font-size: 2.1rem;
+  }
+  
+  main.hero-mod section.palletes {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 21px;
   }
 
   footer {
@@ -789,6 +819,28 @@ footer #my-webs a:hover {
   main.hero-mod section.exercises-nav .take-aways {
     width: 100%;
     padding: 21px;
+  }
+
+  main.hero-mod section.pallete-intro {
+    margin-bottom: 21px;
+  }
+
+  main.hero-mod section.pallete-intro h1 {
+    font-size: 2.1rem;
+    margin-bottom: 14px;
+  }
+
+  main.hero-mod section.pallete-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  main.hero-mod section.pallete-intro a {
+    font-size: 1.8rem;
+  }
+  
+  main.hero-mod section.palletes {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 21px;
   }
 }
 
