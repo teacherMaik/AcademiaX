@@ -370,10 +370,6 @@ section#my-learnings-gallery .card-container {
   justify-content: space-evenly;
 }
 
-section#my-learnings-gallery .card-container:nth-child(1) {
-  justify-content: space-between;
-}
-
 section#my-learnings-gallery .mod-card {
   position: relative;
   width: 210px;
@@ -539,6 +535,10 @@ footer #my-webs a:hover {
   section#hero-home h2 {
     width: 100%;
     font-size: 2.4rem;
+  }
+
+  section#my-learnings-gallery .card-container:nth-child(1) {
+    justify-content: space-between;
   }
 }
 
