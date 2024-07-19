@@ -6,7 +6,19 @@
   <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
   <link rel="stylesheet" href="../css/main.css">
   <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
-  <title>Retos fetch y async con javascript | Teacher Maik en Academia X</title>
+  <style>
+    input {
+      padding: 3px;
+      font-size: 1.8rem;
+      font-weight: 600;
+      width: 42px;
+    }
+
+    input:focus {
+      
+    }
+  </style>
+  <title>Reto Rocola con javascript | Teacher Maik en Academia X</title>
 </head>
 <body>
   
@@ -47,6 +59,46 @@
   </header>
 
   <main class="hero-mod">
+    <section class="rocola">
+      <div class="rocola-intro">
+        <h2>Elige de 1-8 canciones</h2>
+        <input id="request" type="number" value="4">
+        <button id="play-rocola" class="btn-black">¡música!</button>
+      </div>
+      <div class="rocola-display">
+        <div class="cassette">
+          <div class="cassette-header">
+            <h1>Rocola Roquera</h1>
+          </div>
+          <div class="cassette-circle-container">
+            <div class="cassette-circle">
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+            </div>
+            <div class="cassette-circle">
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+              <div class="cassette-circle-line"></div>
+            </div>
+          </div>
+          <div class="cassette-playing">
+            <p id="now-playing">Escuchando a</p>
+            <p id="up-next">y después</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="js-code">
       <pre>
         <code>
@@ -91,10 +143,6 @@
         </code>
       </pre>
     </section>
-    <section class="run-code">
-      <button class="run-code-btn btn-black">Ejecutar Script</button>
-      <div class="display-terminal"></div>
-    </section>
   </main>
 
   <footer>
@@ -119,7 +167,7 @@
     </div>
   </footer>
   
-  <script src="./reto-fetch.js" type="text/javascript"></script>
+  <script src="./rocola.js" type="text/javascript"></script>
   <script src="../utils.js" type="text/javascript"></script>
 </body>
 </html>
