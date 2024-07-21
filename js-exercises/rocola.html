@@ -93,55 +93,17 @@
             </div>
           </div>
           <div class="cassette-playing">
-            <p id="now-playing">Escuchando a</p>
-            <p id="up-next">y después</p>
+            <div class="cassette-playing-container">
+              <p style="color: gold; text-align: center; width: 36%;">Ahora suena</p>
+              <p id="now-playing"></p>
+            </div>
+            <div class="cassette-playing-container">
+              <p style="color: gold; text-align: center; width: 40%;">Viene después</p>
+              <p id="up-next"></p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="js-code">
-      <pre>
-        <code>
-          class Vehicle {
-
-            constructor(numWheels) {
-              this.numWheels = numWheels
-            }
-          
-            printInfo() {
-              return `Este vehículo tiene ${this.numWheels} ruedas.`;
-            }
-          }
-          
-          class VehiclePassengers extends Vehicle {
-          
-            constructor(numWheels, numPassengers) {
-              super(numWheels);
-              this.numPassengers = numPassengers
-            }
-          
-            printInfo() {
-              return `Este vehículo tiene ${this.numWheels} ruebdas y puede transportar ${this.numPassengers}.`
-            }
-          }
-          
-          const fourWheels = new Vehicle(4);
-          const twoWheels = new Vehicle(2);
-          
-          console.log(fourWheels);
-          console.log(fourWheels.printInfo());
-          console.log(twoWheels);
-          console.log(twoWheels.printInfo())
-          
-          const sixPassengers = new VehiclePassengers(fourWheels.numWheels, 6);
-          const onePassenger = new VehiclePassengers(twoWheels.numWheels, 1);
-          
-          console.log(sixPassengers);
-          console.log(sixPassengers.printInfo());
-          console.log(onePassenger);
-          console.log(onePassenger.printInfo());
-        </code>
-      </pre>
     </section>
   </main>
 
