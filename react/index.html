@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -10,50 +13,88 @@
   <title>Lets Learn some React</title>
 </head>
 <body>
-  <div id="header"></div>
-  <div id="root"></div>
-  <div id="main"></div>
-  <div id="nav" style="display: flex; justify-content: space-between">
-    <a href="index.html">Got to Index</a>
-    <a href="jsxComponents.html">Go to jsxComponents</a>
-    <a href="clases.html">Go To Classes</a>
-    <a href="eventsEstados.html">Go To Events % States</a>
-    <a href=""></a>
-  </div>
-  <script type="text/babel">
-    //const h1 = React.createElement('h1', null, 'Hello World!');
+  <header>
+    <div class="navbar">
+      <div class="navbar-logo">
+        <h3>Teacher <span class="inline-gold">Maik</span></h3>
+        <h4>Aprendizajes en Academia X</h4>
+      </div>
+      <nav id="nav-container">
+        <ul id="main-nav-menu">
+          <li><a href="../">inicio</a></li>
+          <li id="drop-nav-container" role="navigation">
+            <div id="hamburger">
+              <div class="hamburger-line top"></div>
+              <div class="hamburger-line mid"></div>
+              <div class="hamburger-line bot"></div>
+            </div>
+            <button id="hamburger-btn"></button>
+            <ul id="drop-nav-menu">
+              <li><a href="../html-exercises/">html</a></li>
+              <li><a href="../css-exercises/">css</a></li>
+              <li><a href="../js-exercises/">javascript</a></li>
+              <li><a href="/">sql</a></li>
+              <li><a href="/">angular</a></li>
+              <li><a href="/">node</a></li>
+              <li><a href="/">express</a></li>
+              <li><a href="/">python</a></li>
+              <li><a href="/">django</a></li>
+              <li><a href="/">despegamos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    const user = {
-      name: 'Michael',
-      surName: 'Bennett',
-    };
-
-    function userFullName(user) {
-      return user.name + ' ' + user.surName;
-    };
-
-    const h1 = <h1 className={user.surName}>Hello World and Hello {userFullName(user)}</h1>;
-    ReactDOM.render(h1, document.getElementById('header'));
-
-    // Not going to render the clock for MEMORY ISSUES: Go look at /react-life-cycles.html
-    /* function tickTockClock() {
-      const clockElement = (
-
-        <div>
-          <h2>¿Qué hora es?</h2>
-          <h3>Son las {new Date().toLocaleTimeString()}</h3>
+  <main>
+    <main class="hero-mod">
+      <section class="hero-mod-info">
+        <div class="hero-mod-info-text">
+          <h1>React</h1>
+          <h2>Al comenzar este Bootcamp había hecho algún tutorial pero digamos que parto de prácticamente 0 y estoy realmente emocionado de emprender el aprendizaje de esta tecnología</h2>
         </div>
-      );
-      ReactDOM.render(clockElement, document.getElementById('root'));
-    }
+        <img id="js" src="../img/reacr-svgrepo-com.svg" alt="react logo">
+      </section>
+      <section class="exercises-nav">
+        <nav>
+          <h3>Retos del curso</h3>
+          <ul>
+            <li><a href="./react-states-reto.html">Retos Estados</a></li>
+            <li><a href="./"></a></li>
+            
+          </ul>
+        </nav>
+        <div class="take-aways">
+          <p style="font-size: 16px; margin-bottom: 14px;">De este curso destacaría conocer el uso de citas, etiquetas para código, srcsets para imágenes, estructuración de datos con tablas y los diferentes inputs y sus atributos para los formularios.</p>
+          <p style="font-size: 16px; margin-bottom: 14px;">Me gustaría aprender más sobre accesibilidad, en específico los atributos <em style="font-size: 16px; font-weight: 600;">aria-label</em>, y diseñar mejores experiencias de usuario.</p>
+        </div>
+      </section>
+    </main>
+  </main>
 
-    setInterval(tickTockClock, 1000); */
+  <footer>
+    <div id="footer-container">
+      <div id="footer-social">
+        <a href="https://github.com/teacherMaik" class="fab fa-github fa-4x" target="_blank"></a>
+        <a href="https://x.com/TeacherMaik" class="fab fa-twitter fa-4x" target="_blank"></a>
+        <a href="https://www.instagram.com/teacherMaik" class="fab fa-instagram fa-4x" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/michael-thomas-bennett-6631822a/" class="fab fa-linkedin fa-4x" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCLTvAgvSy7ViRi7yAe0ogDA" class="fab fa-youtube fa-4x" target="_blank"></a>
+      </div>
+      <div id="footer-info">
+        <p>&copy;Michael Thomas Bennett</p>
+      </div>
+    </div>
+    <div id="footer-container">
+      <div id="my-webs">
+        <a href="https://ludotecaenlanube.com/">Ludoteca en la Nube</a>
+        <a href="https://www.vindrogames.com/">Vindrogames</a>
+        <a href="https://terraturca.es/">Terra Turca</a>
+      </div>
+    </div>
+  </footer>
 
-    function IntroText(text) {
-      return <h2>{text}</h2>;
-    };
-
-    ReactDOM.render(IntroText('This is new Intro Text'), document.getElementById('main'));
-  </script>
+  <script src="../utils.js" type="text/javascript"></script>
 </body>
 </html>

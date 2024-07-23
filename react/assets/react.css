@@ -17,8 +17,6 @@ img {
   padding: 21px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-content: center;
 }
 
 .card {
@@ -30,6 +28,7 @@ img {
   border-radius: 14px;
   width: calc(100vw / 4);
   aspect-ratio: 1/1;
+  height: 100%;
 }
 
 .card-description {
@@ -56,4 +55,32 @@ img {
   border-radius: 3px;
   background-color: blue;
   color: white
+}
+
+@media (max-width: 768px) {
+
+  .section-container {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 42px;
+  }
+
+  .card {
+    width: calc(100vw / 3);
+  }
+}
+
+@media (max-width: 576px) {
+  .section-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .card {
+    width: 84vw;
+  }
 }
