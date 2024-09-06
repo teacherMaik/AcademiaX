@@ -59,14 +59,18 @@
     <section id="root"></section>
     <script type="text/babel">
 
+      const onChange = (e) => {
+
+      }
+
       function FormGroup (props) {
 
         return (
           <div className="form-group">
             <label for={props.id}>{props.text}</label>
-            <input id={props.id} type="<text>"></input>
+            <input id={props.id} name={props.id} type="text" onChange={onChange}></input>
           </div>
-        )
+        );
       }
 
       function Form() {
@@ -78,6 +82,8 @@
           const name = document.getElementById('name').value;
           const email = document.getElementById('email').value;
           const message = document.getElementById('message').value;
+
+          alert(name + ' ' + email + ' ' + message)
         }
 
         return (
@@ -86,7 +92,7 @@
             <form onSubmit = { onSubmit }>
               <FormGroup id="name" text="Nombre:"  />
               <FormGroup id="email" text="Correo:" />
-              <FormGroup id="messge" text="Mensaje:" />
+              <FormGroup id="message" text="Mensaje:" />
               <button type="submit">Enviar</button>
             </form>
           </div>
