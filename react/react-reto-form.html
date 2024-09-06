@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
   <link rel="stylesheet" href="assets/react.css">
   <link rel="stylesheet" href="../css/main.css">
   <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
@@ -15,7 +16,7 @@
       padding: 90px 0px 20px 0px;
     }
   </style>
-  <title>React Life Cycles</title>
+  <title>React States</title>
 </head>
 <body>
   <header>
@@ -56,70 +57,44 @@
 
   <main class="hero-mod">
     <section id="root"></section>
-  <script type="text/babel">
+    <script type="text/babel">
 
-    function ProductCounter(props) {
+      function FormGroup (props) {
 
-      const [ticks, setTicks] = React.useState(0);
-      
-      function upTicks() {
-        setTicks(ticks + 1);
-      }
-
-      function downTicks() {
-        setTicks(ticks - 1);
-      }
-
-      return (
-
-        <div className={ 'product-counter' }>
-          <button onClick={downTicks}>-</button>
-          <p>{ ticks }</p>
-          <button onClick={upTicks}>+</button>
-        </div>
-      )
-    }
-
-    function Card(props) {
-
-      return (
-
-        <div className={ 'card' }>
-          <img src={props.img} alt="" />
-          <div className={ 'card-description' }>
-            <h2>{props.title}</h2>
-            <p>{props.text}</p>
-            <ProductCounter />
+        return (
+          <div className="form-group">
+            <label for={props.id}>{props.text}</label>
+            <input id={props.id} type="<text>"></input>
           </div>
-        </div>
-      )
-    }
+        )
+      }
 
-    function ProductGrid(props) {
+      function Form() {
 
-      return (
-        <section className={ 'section-container' }>
-          <Card 
-            img={ 'assets/nintendo-minecraft-unplash.r_d.3976-2652.webp' } 
-            title={ 'Nintendo Switch' } 
-            text={ 'Consola más reciente de Nintendo que cambió el mercado' }
-            />
-          <Card 
-            img={ 'assets/images.jpg' } 
-            title={ 'Playstation Distancia' } 
-            text={ 'Consola de Playstation para competir con el Nintendo Switch' }
-          />
-          <Card
-            img={ 'assets/images-xbox.jpg' }
-            title={ 'X-box' } 
-            text={ 'No tiene consola de manos como Nintendo o Playstation' }
-          />
-        </section>
-      )
-    }
+        const onSubmit = (e) => {
 
-    ReactDOM.render(<ProductGrid />, document.getElementById('root'));
-  </script>
+          e.preventDefault();
+
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message').value;
+        }
+
+        return (
+          <div className="form-container">
+            <h1>Formulario</h1>
+            <form onSubmit = { onSubmit }>
+              <FormGroup id="name" text="Nombre:"  />
+              <FormGroup id="email" text="Correo:" />
+              <FormGroup id="messge" text="Mensaje:" />
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        )
+      }
+
+      ReactDOM.render(<Form />, document.getElementById('root'));
+    </script>
   </main>
 
   <footer>

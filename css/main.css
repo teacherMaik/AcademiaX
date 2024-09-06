@@ -38,6 +38,8 @@ li {
   font-size: 24px;
 }
 
+label, input {font-family: var(--text-font);}
+
 a { 
   font-family: var(--text-font);
   text-decoration: none;

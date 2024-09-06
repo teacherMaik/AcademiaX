@@ -4,13 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
+  <link rel="stylesheet" href="assets/react.css">
   <link rel="stylesheet" href="../css/main.css">
   <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <title>Lets Learn some React</title>
+  <style>
+    main.hero-mod {
+      padding: 90px 0px 20px 0px;
+    }
+  </style>
+  <title>React States</title>
 </head>
 <body>
   <header>
@@ -21,7 +27,8 @@
       </div>
       <nav id="nav-container">
         <ul id="main-nav-menu">
-          <li><a href="../">inicio</a></li>
+          <li class="hide-320"><a href="../">inicio</a></li>
+          <li><a href="./">volver</a></li>
           <li id="drop-nav-container" role="navigation">
             <div id="hamburger">
               <div class="hamburger-line top"></div>
@@ -30,6 +37,7 @@
             </div>
             <button id="hamburger-btn"></button>
             <ul id="drop-nav-menu">
+              <li class="show-320"><a href="../">inicio</a></li>
               <li><a href="../html-exercises/">html</a></li>
               <li><a href="../css-exercises/">css</a></li>
               <li><a href="../js-exercises/">javascript</a></li>
@@ -47,30 +55,72 @@
     </div>
   </header>
 
-  <main>
-    <main class="hero-mod">
-      <section class="hero-mod-info">
-        <div class="hero-mod-info-text">
-          <h1>React</h1>
-          <h2>Los primeros ejercicios son enlaces a ficheros HTML con babel cdn y el JSX escrito en el mismo fichero.</h2>
-        </div>
-        <img id="js" src="../img/react-svgrepo-com.svg" alt="react logo">
-      </section>
-      <section class="exercises-nav">
-        <nav>
-          <h3>Retos del curso</h3>
-          <ul>
-            <li><a href="./react-reto-states.html">Reto Estados</a></li>
-            <li><a href="./react-reto-form.html">Reto Form</a></li>
-            
-          </ul>
-        </nav>
-        <div class="take-aways">
-          <p style="font-size: 16px; margin-bottom: 14px;">De este curso destacaría conocer el uso de citas, etiquetas para código, srcsets para imágenes, estructuración de datos con tablas y los diferentes inputs y sus atributos para los formularios.</p>
-          <p style="font-size: 16px; margin-bottom: 14px;">Me gustaría aprender más sobre accesibilidad, en específico los atributos <em style="font-size: 16px; font-weight: 600;">aria-label</em>, y diseñar mejores experiencias de usuario.</p>
-        </div>
-      </section>
-    </main>
+  <main class="hero-mod">
+    <section id="root"></section>
+    <script type="text/babel">
+
+      function ProductCounter(props) {
+
+        const [ticks, setTicks] = React.useState(0);
+        
+        function upTicks() {
+          setTicks(ticks + 1);
+        }
+
+        function downTicks() {
+          setTicks(ticks - 1);
+        }
+
+        return (
+
+          <div className={ 'product-counter' }>
+            <button onClick={downTicks}>-</button>
+            <p>{ ticks }</p>
+            <button onClick={upTicks}>+</button>
+          </div>
+        )
+      }
+
+      function Card(props) {
+
+        return (
+
+          <div className={ 'card' }>
+            <img src={props.img} alt="" />
+            <div className={ 'card-description' }>
+              <h2>{props.title}</h2>
+              <p>{props.text}</p>
+              <ProductCounter />
+            </div>
+          </div>
+        )
+      }
+
+      function ProductGrid() {
+
+        return (
+          <section className={ 'section-container' }>
+            <Card 
+              img={ 'assets/nintendo-minecraft-unplash.r_d.3976-2652.webp' } 
+              title={ 'Nintendo Switch' } 
+              text={ 'Consola más reciente de Nintendo que cambió el mercado' }
+              />
+            <Card 
+              img={ 'assets/images.jpg' } 
+              title={ 'Playstation Distancia' } 
+              text={ 'Consola de Playstation para competir con el Nintendo Switch' }
+            />
+            <Card
+              img={ 'assets/images-xbox.jpg' }
+              title={ 'X-box' } 
+              text={ 'No tiene consola de manos como Nintendo o Playstation' }
+            />
+          </section>
+        )
+      }
+
+      ReactDOM.render(<ProductGrid />, document.getElementById('root'));
+    </script>
   </main>
 
   <footer>
