@@ -62,6 +62,11 @@ img {
   opacity: 0.75;
 }
 
+.forms-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .form-container {
   align-self: center;
   width: 100%;
@@ -71,15 +76,26 @@ img {
   justify-content: center;
 }
 
-.form-container h1 {
+form {
+  width: auto;
+  box-shadow: 0 2px 5px lightslategray;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container h1.form-1 {
   color: blue;
+}
+
+.form-container h1.form-2 {
+  color: purple;
 }
 
 .form-container .form-group {
   display: flex;
   flex-direction: column;
   margin: 14px;
-  width: 100%;
+  width: auto;
 }
 
 .form-container .form-group input {
@@ -89,14 +105,19 @@ img {
 }
 
 .form-container button {
-  width: 100%;
+  width: 84%;
   background-color: blue;
   color: white;
   border: none;
   border-radius: 3px;
   cursor: pointer;
   padding: 7px;
-  margin: 14px;
+  margin: 14px 0;
+  align-self: center;
+}
+
+.form-container button.form-2 {
+  background-color: purple;
 }
 
 .form-container button:hover {
@@ -112,6 +133,14 @@ img {
 
   .card {
     width: calc(100vw / 3);
+  }
+
+  .forms-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container {
+    margin: 14px 0;
   }
 }
 

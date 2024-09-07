@@ -75,7 +75,7 @@
 
       function Form() {
 
-        const onSubmit = (e) => {
+        const onSubmit_1 = (e) => {
 
           e.preventDefault();
 
@@ -83,18 +83,63 @@
           const email = document.getElementById('email').value;
           const message = document.getElementById('message').value;
 
-          alert(name + ' ' + email + ' ' + message)
+          alert(`El mensaje "${message}" de ${name} has sido enviado. Pordás contestarle a ${email}, ¡gracias!`)
+        }
+
+        const [formData, setFormData] = React.useState({
+
+          name2: '',
+          email2: '',
+          message2: '',
+        });
+
+        const { name2, email2, message2, } = formData;
+
+        const onChange = (e) => {
+
+          setFormData((prevState) => ({
+
+            ...prevState,
+            [e.target.name]: e.target.value,
+          }))
+        };
+
+        const onSubmit_2 = (e) => {
+
+          alert(`el mensaje "${formData.message2}" de ${formData.name2} ha sido enviado. Podrás contestarle a ${formData.email2}, ¡gracias!`);
         }
 
         return (
-          <div className="form-container">
-            <h1>Formulario</h1>
-            <form onSubmit = { onSubmit }>
-              <FormGroup id="name" text="Nombre:"  />
-              <FormGroup id="email" text="Correo:" />
-              <FormGroup id="message" text="Mensaje:" />
-              <button type="submit">Enviar</button>
-            </form>
+          <div className="forms-container">
+
+            <div class="form-container">
+              <h1 className="form-1">Formulario 1</h1>
+              <form onSubmit = { onSubmit_1 }>
+                <FormGroup id="name" text="Nombre:"  />
+                <FormGroup id="email" text="Correo:" />
+                <FormGroup id="message" text="Mensaje:" />
+                <button className="form-1" type="submit">Enviar</button>
+              </form>
+            </div>
+
+            <div class="form-container">
+              <h1 className="form-2">Formulario 1</h1>
+              <form onSubmit = { onSubmit_2 }>
+                <div className="form-group">
+                  <label for="name2">Nombre:</label>
+                  <input id="name2" name="name2" type="text" value={name2} onChange={ onChange }></input>
+                </div>
+                <div className="form-group">
+                  <label for="email2">Correo:</label>
+                  <input id="email2" name="email2" type="text" value={email2} onChange={ onChange }></input>
+                </div>
+                <div className="form-group">
+                  <label for="message2">Mensaje:</label>
+                  <input id="message2" name="message2" type="text" value={message2} onChange={ onChange }></input>
+                </div>
+                <button className="form-2" type="submit">Enviar</button>
+              </form>
+            </div>
           </div>
         )
       }
