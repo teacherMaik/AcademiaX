@@ -127,9 +127,9 @@ form {
 .users-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 21px;
   margin-bottom: 42px;
-  padding: 21px;
+  padding: 42px;
 }
 
 .users-grid .card {
