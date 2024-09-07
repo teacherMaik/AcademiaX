@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="img/x-icon" href="../img/tm-favicon.ico">
   <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="assets/react.css">
   <script src="https://kit.fontawesome.com/43e3be112e.js" crossorigin="anonymous"></script>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <title>Lets Learn some React</title>
+  <style>
+    main.hero-mod {
+      padding: 90px 0px 20px 0px;
+    }
+  </style>
+  <title>React States</title>
 </head>
 <body>
   <header>
@@ -21,7 +27,8 @@
       </div>
       <nav id="nav-container">
         <ul id="main-nav-menu">
-          <li><a href="../">inicio</a></li>
+          <li class="hide-320"><a href="../">inicio</a></li>
+          <li><a href="./">volver</a></li>
           <li id="drop-nav-container" role="navigation">
             <div id="hamburger">
               <div class="hamburger-line top"></div>
@@ -30,6 +37,7 @@
             </div>
             <button id="hamburger-btn"></button>
             <ul id="drop-nav-menu">
+              <li class="show-320"><a href="../">inicio</a></li>
               <li><a href="../html-exercises/">html</a></li>
               <li><a href="../css-exercises/">css</a></li>
               <li><a href="../js-exercises/">javascript</a></li>
@@ -47,31 +55,36 @@
     </div>
   </header>
 
-  <main>
-    <main class="hero-mod">
-      <section class="hero-mod-info">
-        <div class="hero-mod-info-text">
-          <h1>React</h1>
-          <h2>Los primeros ejercicios son enlaces a ficheros HTML con babel cdn y el JSX escrito en el mismo fichero.</h2>
-        </div>
-        <img id="js" src="../img/react-svgrepo-com.svg" alt="react logo">
-      </section>
-      <section class="exercises-nav">
-        <nav>
-          <h3>Retos del curso</h3>
-          <ul>
-            <li><a href="./react-reto-states.html">Reto Estados</a></li>
-            <li><a href="./react-reto-form.html">Reto Form</a></li>
-            <li><a href="./react-reto-hooks.html">Reto Ganchos</a></li>
-            
-          </ul>
-        </nav>
-        <div class="take-aways">
-          <p style="font-size: 16px; margin-bottom: 14px;">De este curso destacaría conocer el uso de citas, etiquetas para código, srcsets para imágenes, estructuración de datos con tablas y los diferentes inputs y sus atributos para los formularios.</p>
-          <p style="font-size: 16px; margin-bottom: 14px;">Me gustaría aprender más sobre accesibilidad, en específico los atributos <em style="font-size: 16px; font-weight: 600;">aria-label</em>, y diseñar mejores experiencias de usuario.</p>
-        </div>
-      </section>
-    </main>
+  <main class="hero-mod">
+    <section id="root"></section>
+    <script type="text/babel">
+
+      function App() {
+
+        const [users, setUsers] = React.useState([]);
+
+        React.useEffect(() => {
+
+          fetch('https://jsonplaceholder.typicode.com/users')
+            .then((response) => response.json())
+            .then(data => setUsers(data))
+            .catch(err => console.log(err));
+        });
+
+        return (
+          <div className="users-grid">
+            {users.map((user, i) => (
+              <div key={i} className="card">
+                <h4>{user.name}</h4>
+                <p>{user.company.catchPhrase}</p>
+              </div>
+            ))}
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
   </main>
 
   <footer>

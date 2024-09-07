@@ -124,6 +124,22 @@ form {
   opacity: 0.8;
 }
 
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 42px;
+}
+
+.users-grid .card {
+  box-shadow: 0 2px 5px lightslategray;
+  width: 100%;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 @media (max-width: 768px) {
 
   .section-container {
@@ -142,6 +158,10 @@ form {
   .form-container {
     margin: 14px 0;
   }
+
+  .users-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 576px) {
@@ -151,6 +171,10 @@ form {
 
   .card {
     width: 70vw;
+  }
+
+  .users-grid {
+    grid-template-columns: 1fr;
   }
 }
 
