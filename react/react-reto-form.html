@@ -59,16 +59,12 @@
     <section id="root"></section>
     <script type="text/babel">
 
-      const onChange = (e) => {
-
-      }
-
       function FormGroup (props) {
 
         return (
           <div className="form-group">
             <label for={props.id}>{props.text}</label>
-            <input id={props.id} name={props.id} type="text" onChange={onChange}></input>
+            <input id={props.id} name={props.id} type="text"></input>
           </div>
         );
       }
@@ -114,6 +110,7 @@
 
             <div class="form-container">
               <h1 className="form-1">Formulario 1</h1>
+              <p style={{fontSize: '16px', marginBottom: '14px', width: '84%'}}>Este formulario usa Componentes funcionales para cada grupo del formulario, que contiene el label tag y el input tag. Reciben props de id y de texto.</p>
               <form onSubmit = { onSubmit_1 }>
                 <FormGroup id="name" text="Nombre:"  />
                 <FormGroup id="email" text="Correo:" />
@@ -123,7 +120,8 @@
             </div>
 
             <div class="form-container">
-              <h1 className="form-2">Formulario 1</h1>
+              <h1 className="form-2">Formulario 2</h1>
+              <p style={{fontSize: '16px', marginBottom: '14px', width: '84%'}}>Este formulario no tiene componentes pero usa los estados para actualizar las variables con cada carácter tecleado.</p>
               <form onSubmit = { onSubmit_2 }>
                 <div className="form-group">
                   <label for="name2">Nombre:</label>
